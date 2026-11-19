@@ -23,7 +23,7 @@ first dataset audit to the current experiments.
 | Validation redesign + 18 pre-training tests | Done |
 | Controlled experiments (`scripts/run_experiments.sh`) | Done: only `exp04_center` (neck-centred coordinates) passed the pre-registered rule; see `reports/experiments_mcc/comparison.md` |
 | Seed confirmation of exp04_center (`run_experiments.sh confirm`) | CONFIRMED: better than the same-seed baseline for all 3 seeds in both folds (MCC +0.15 to +0.44); `reports/experiments_mcc/seed_confirmation.md` |
-| Final test evaluation (`scripts/run_final_test.sh`) | Next; one time only, reporting rules fixed in `final_test_report.py` |
+| Final test evaluation (`scripts/run_final_test.sh`, post-hoc) | Done: neck-centred ST-GCN, mean over 3 seeds, both held-out scenes pooled: MCC 0.50, F1 0.58, 28 of 30 falls detected, 21.7 of 40 ADL videos without false alarm; `reports/final_test/final_test.md` |
 | Symbolic stream (neck height in metres, Eq. 1, 7 to 10) | Not started |
 | Fusion (Eq. 11 to 13) | Not started |
 | External test dataset | Not started |
