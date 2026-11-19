@@ -6,9 +6,11 @@
 # interrupted run resumes from its last completed epoch.
 # Usage: bash scripts/run_experiments.sh          (full: 7 runs x 2 folds x 50 epochs)
 #        bash scripts/run_experiments.sh quick    (small trial: same steps, 10 epochs, 2 runs, separate folders)
+#        bash scripts/run_experiments.sh confirm  (seed confirmation of exp04_center: 3 more runs, same folders)
 P="${PROJECT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"   # repo root (override with PROJECT_ROOT)
 command -v caffeinate >/dev/null 2>&1 || caffeinate() { [ "$1" = "-i" ] && shift; "$@"; }   # macOS keep-awake; no-op elsewhere
 QUICK=0; [ "$1" = "quick" ] && QUICK=1
+CONFIRM=0; [ "$1" = "confirm" ] && CONFIRM=1
 cd "$P" || exit 1
 source .venv/bin/activate
 CODE="$P/fall_detection_models/code/stgcn_urfd"
@@ -42,6 +44,16 @@ run() {   # run <name> [extra train.py args]
   caffeinate -i python train.py --data_dir "$DATA" --split_file "$SPLIT" --out_dir "$ROOT/$name" \
     --no_test --select val_mcc $EXTRA "$@" 2>&1 | grep -v -i -E "warn|detach\(\) first" || { echo "RUN FAILED: $name"; exit 1; }
 }
+if [ $CONFIRM = 1 ]; then
+  # pre-registered rule: compare_seeds.py (written before these runs started)
+  run baseline_v2_s44 --seed 44
+  run exp04_center_s43 --seed 43 --norm_mode window_center
+  run exp04_center_s44 --seed 44 --norm_mode window_center
+  python compare_seeds.py --runs_root "$ROOT" --out "$REP" || exit 1
+  echo "CONFIRM_DONE -> reports/experiments_mcc/seed_confirmation.md"
+  exit 0
+fi
+
 run baseline_v2_s42
 if [ $QUICK = 1 ]; then
   run exp05_padbalance --pad_balance
