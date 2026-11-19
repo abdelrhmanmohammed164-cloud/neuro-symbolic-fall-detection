@@ -1,0 +1,106 @@
+2026-11-19 07:50:38,010 INFO === train | device mps | split scene (17fe4100648f) | config 6f9d66e1a7b3 | data 737c0f7b03ee
+2026-11-19 07:50:38,648 INFO fold 1: train 32 seq (2048 windows/epoch), val 9, test 29 | pos_weight 2.073 | padded windows fall 89% / non-fall 67%
+2026-11-19 07:50:55,399 INFO fold 1 epoch  0 | train 0.6580 | val loss 0.6281 F1 0.000 R 0.000 *best
+2026-11-19 07:51:09,807 INFO fold 1 epoch  1 | train 0.3874 | val loss 0.7257 F1 0.292 R 1.000
+2026-11-19 07:51:24,467 INFO fold 1 epoch  2 | train 0.2647 | val loss 0.4117 F1 0.000 R 0.000 *best
+2026-11-19 07:51:40,083 INFO fold 1 epoch  3 | train 0.2187 | val loss 0.3447 F1 0.000 R 0.000 *best
+2026-11-19 07:51:55,777 INFO fold 1 epoch  4 | train 0.1668 | val loss 0.2828 F1 0.226 R 0.130 *best
+2026-11-19 07:52:11,205 INFO fold 1 epoch  5 | train 0.0984 | val loss 0.4083 F1 0.000 R 0.000
+2026-11-19 07:52:26,599 INFO fold 1 epoch  6 | train 0.1629 | val loss 0.4239 F1 0.423 R 0.630
+2026-11-19 07:52:42,008 INFO fold 1 epoch  7 | train 0.0983 | val loss 0.3753 F1 0.043 R 0.022
+2026-11-19 07:52:57,735 INFO fold 1 epoch  8 | train 0.1038 | val loss 0.3825 F1 0.247 R 0.217
+2026-11-19 07:53:14,059 INFO fold 1 epoch  9 | train 0.0857 | val loss 0.2716 F1 0.441 R 0.283 *best
+2026-11-19 07:53:30,922 INFO fold 1 epoch 10 | train 0.0739 | val loss 0.8331 F1 0.043 R 0.022
+2026-11-19 07:53:46,933 INFO fold 1 epoch 11 | train 0.0513 | val loss 0.4785 F1 0.565 R 0.565
+2026-11-19 07:54:02,833 INFO fold 1 epoch 12 | train 0.0418 | val loss 0.6060 F1 0.386 R 0.239
+2026-11-19 07:54:18,750 INFO fold 1 epoch 13 | train 0.0604 | val loss 0.2745 F1 0.821 R 0.696
+2026-11-19 07:54:35,846 INFO fold 1 epoch 14 | train 0.0805 | val loss 5.6292 F1 0.288 R 1.000
+2026-11-19 07:54:51,896 INFO fold 1 epoch 15 | train 0.0513 | val loss 1.5405 F1 0.495 R 1.000
+2026-11-19 07:55:07,981 INFO fold 1 epoch 16 | train 0.0484 | val loss 3.4099 F1 0.383 R 1.000
+2026-11-19 07:55:23,953 INFO fold 1 epoch 17 | train 0.0385 | val loss 15.6893 F1 0.265 R 1.000
+2026-11-19 07:55:40,118 INFO fold 1 epoch 18 | train 0.0359 | val loss 3.9507 F1 0.376 R 1.000
+2026-11-19 07:55:56,018 INFO fold 1 epoch 19 | train 0.0305 | val loss 7.6609 F1 0.302 R 1.000
+2026-11-19 07:56:12,154 INFO fold 1 epoch 20 | train 0.0199 | val loss 4.9939 F1 0.347 R 1.000
+2026-11-19 07:56:28,216 INFO fold 1 epoch 21 | train 0.0585 | val loss 8.5014 F1 0.278 R 1.000
+2026-11-19 07:56:44,296 INFO fold 1 epoch 22 | train 0.0280 | val loss 4.4282 F1 0.351 R 1.000
+2026-11-19 07:57:00,615 INFO fold 1 epoch 23 | train 0.0283 | val loss 3.9660 F1 0.361 R 1.000
+2026-11-19 07:57:16,706 INFO fold 1 epoch 24 | train 0.0169 | val loss 1.0256 F1 0.579 R 1.000
+2026-11-19 07:57:33,083 INFO fold 1 epoch 25 | train 0.0261 | val loss 0.1941 F1 0.805 R 0.674 *best
+2026-11-19 07:57:49,096 INFO fold 1 epoch 26 | train 0.0400 | val loss 1.0874 F1 0.601 R 1.000
+2026-11-19 07:58:05,451 INFO fold 1 epoch 27 | train 0.0154 | val loss 0.1247 F1 0.821 R 0.696 *best
+2026-11-19 07:58:21,735 INFO fold 1 epoch 28 | train 0.0137 | val loss 0.1509 F1 0.828 R 0.783
+2026-11-19 07:58:38,276 INFO fold 1 epoch 29 | train 0.0085 | val loss 0.0598 F1 0.918 R 0.848 *best
+2026-11-19 07:58:54,614 INFO fold 1 epoch 30 | train 0.0638 | val loss 0.0753 F1 0.902 R 1.000
+2026-11-19 07:59:10,966 INFO fold 1 epoch 31 | train 0.0287 | val loss 0.1614 F1 0.732 R 0.978
+2026-11-19 07:59:27,169 INFO fold 1 epoch 32 | train 0.0230 | val loss 1.0160 F1 0.523 R 0.978
+2026-11-19 07:59:43,728 INFO fold 1 epoch 33 | train 0.0116 | val loss 0.2923 F1 0.757 R 0.848
+2026-11-19 08:00:00,404 INFO fold 1 epoch 34 | train 0.0182 | val loss 0.1072 F1 0.918 R 0.848
+2026-11-19 08:00:17,178 INFO fold 1 epoch 35 | train 0.0186 | val loss 0.3172 F1 0.672 R 0.978
+2026-11-19 08:00:33,751 INFO fold 1 epoch 36 | train 0.0127 | val loss 0.0417 F1 0.945 R 0.935 *best
+2026-11-19 08:00:50,347 INFO fold 1 epoch 37 | train 0.0067 | val loss 0.0372 F1 0.957 R 0.957 *best
+2026-11-19 08:01:07,015 INFO fold 1 epoch 38 | train 0.0107 | val loss 0.3323 F1 0.672 R 0.957
+2026-11-19 08:01:23,589 INFO fold 1 epoch 39 | train 0.0057 | val loss 2.2066 F1 0.436 R 1.000
+2026-11-19 08:01:40,336 INFO fold 1 epoch 40 | train 0.0108 | val loss 0.4315 F1 0.595 R 0.848
+2026-11-19 08:01:56,865 INFO fold 1 epoch 41 | train 0.0137 | val loss 0.9951 F1 0.571 R 1.000
+2026-11-19 08:02:13,721 INFO fold 1 epoch 42 | train 0.0275 | val loss 1.2957 F1 0.630 R 1.000
+2026-11-19 08:02:30,551 INFO fold 1 epoch 43 | train 0.0165 | val loss 0.0919 F1 0.893 R 1.000
+2026-11-19 08:02:47,133 INFO fold 1 epoch 44 | train 0.0126 | val loss 0.0334 F1 0.967 R 0.957 *best
+2026-11-19 08:03:03,805 INFO fold 1 epoch 45 | train 0.0034 | val loss 0.0380 F1 0.956 R 0.935
+2026-11-19 08:03:20,453 INFO fold 1 epoch 46 | train 0.0044 | val loss 0.1118 F1 0.878 R 0.935
+2026-11-19 08:03:37,240 INFO fold 1 epoch 47 | train 0.0124 | val loss 0.2101 F1 0.841 R 0.978
+2026-11-19 08:03:53,810 INFO fold 1 epoch 48 | train 0.0132 | val loss 0.0492 F1 0.920 R 0.870
+2026-11-19 08:04:10,713 INFO fold 1 epoch 49 | train 0.0098 | val loss 0.0602 F1 0.889 R 0.957
+2026-11-19 08:04:23,549 INFO fold 1 TEST (frame level): acc 0.889 P 0.683 R 0.545 spec 0.953 F1 0.606 | best epoch 44, T=1.23
+2026-11-19 08:41:10,244 INFO === train | device mps | split scene (17fe4100648f) | config 6f9d66e1a7b3 | data 737c0f7b03ee
+2026-11-19 08:41:10,720 INFO fold 0: train 23 seq (1472 windows/epoch), val 6, test 41 | pos_weight 1.969 | padded windows fall 62% / non-fall 59%
+2026-11-19 08:41:20,915 INFO fold 0 epoch  0 | train 0.5260 | val loss 0.5172 F1 0.000 R 0.000 *best
+2026-11-19 08:41:29,480 INFO fold 0 epoch  1 | train 0.2449 | val loss 0.4293 F1 0.000 R 0.000 *best
+2026-11-19 08:41:38,005 INFO fold 0 epoch  2 | train 0.2073 | val loss 0.3530 F1 0.000 R 0.000 *best
+2026-11-19 08:41:46,347 INFO fold 0 epoch  3 | train 0.1118 | val loss 0.3740 F1 0.000 R 0.000
+2026-11-19 08:41:54,832 INFO fold 0 epoch  4 | train 0.2143 | val loss 0.3087 F1 0.192 R 0.132 *best
+2026-11-19 08:42:03,163 INFO fold 0 epoch  5 | train 0.1421 | val loss 0.3735 F1 0.000 R 0.000
+2026-11-19 08:42:11,571 INFO fold 0 epoch  6 | train 0.0896 | val loss 0.4913 F1 0.000 R 0.000
+2026-11-19 08:42:19,890 INFO fold 0 epoch  7 | train 0.1021 | val loss 0.4626 F1 0.000 R 0.000
+2026-11-19 08:42:28,221 INFO fold 0 epoch  8 | train 0.0872 | val loss 0.3575 F1 0.000 R 0.000
+2026-11-19 08:42:36,611 INFO fold 0 epoch  9 | train 0.0571 | val loss 0.3589 F1 0.000 R 0.000
+2026-11-19 08:42:44,874 INFO fold 0 epoch 10 | train 0.0590 | val loss 0.4027 F1 0.051 R 0.026
+2026-11-19 08:42:53,169 INFO fold 0 epoch 11 | train 0.0739 | val loss 0.4549 F1 0.100 R 0.053
+2026-11-19 08:43:01,578 INFO fold 0 epoch 12 | train 0.0490 | val loss 0.4120 F1 0.100 R 0.053
+2026-11-19 08:43:10,062 INFO fold 0 epoch 13 | train 0.0514 | val loss 0.1027 F1 0.930 R 0.868 *best
+2026-11-19 08:43:18,405 INFO fold 0 epoch 14 | train 0.0610 | val loss 0.1271 F1 0.712 R 0.553
+2026-11-19 08:43:26,727 INFO fold 0 epoch 15 | train 0.0475 | val loss 0.1603 F1 0.690 R 0.526
+2026-11-19 08:43:35,063 INFO fold 0 epoch 16 | train 0.0382 | val loss 0.1843 F1 0.593 R 0.421
+2026-11-19 08:43:43,493 INFO fold 0 epoch 17 | train 0.0427 | val loss 0.0961 F1 0.848 R 0.737 *best
+2026-11-19 08:43:51,839 INFO fold 0 epoch 18 | train 0.0459 | val loss 0.2927 F1 0.588 R 0.526
+2026-11-19 08:44:00,222 INFO fold 0 epoch 19 | train 0.0385 | val loss 0.0485 F1 0.930 R 0.868 *best
+2026-11-19 08:44:08,808 INFO fold 0 epoch 20 | train 0.0235 | val loss 0.0638 F1 0.923 R 0.947
+2026-11-19 08:44:17,280 INFO fold 0 epoch 21 | train 0.0316 | val loss 0.1811 F1 0.733 R 0.579
+2026-11-19 08:44:25,718 INFO fold 0 epoch 22 | train 0.0196 | val loss 0.1041 F1 0.870 R 0.789
+2026-11-19 08:44:34,227 INFO fold 0 epoch 23 | train 0.0305 | val loss 0.2304 F1 0.667 R 0.500
+2026-11-19 08:44:42,703 INFO fold 0 epoch 24 | train 0.0260 | val loss 0.3438 F1 0.657 R 0.605
+2026-11-19 08:44:51,273 INFO fold 0 epoch 25 | train 0.0192 | val loss 0.1390 F1 0.657 R 0.579
+2026-11-19 08:44:59,990 INFO fold 0 epoch 26 | train 0.0322 | val loss 0.1032 F1 0.843 R 0.921
+2026-11-19 08:45:08,866 INFO fold 0 epoch 27 | train 0.0402 | val loss 0.0580 F1 0.917 R 0.868
+2026-11-19 08:45:17,738 INFO fold 0 epoch 28 | train 0.0254 | val loss 0.3191 F1 0.588 R 0.526
+2026-11-19 08:45:26,709 INFO fold 0 epoch 29 | train 0.0300 | val loss 0.1100 F1 0.703 R 0.684
+2026-11-19 08:45:35,808 INFO fold 0 epoch 30 | train 0.0102 | val loss 0.0780 F1 0.914 R 0.842
+2026-11-19 08:45:44,857 INFO fold 0 epoch 31 | train 0.0174 | val loss 0.0634 F1 0.882 R 0.789
+2026-11-19 08:45:54,049 INFO fold 0 epoch 32 | train 0.0295 | val loss 0.0446 F1 0.935 R 0.947 *best
+2026-11-19 08:46:03,119 INFO fold 0 epoch 33 | train 0.0149 | val loss 0.0715 F1 0.878 R 0.947
+2026-11-19 08:46:12,324 INFO fold 0 epoch 34 | train 0.0119 | val loss 0.0738 F1 0.882 R 0.789
+2026-11-19 08:46:21,396 INFO fold 0 epoch 35 | train 0.0225 | val loss 0.2521 F1 0.618 R 0.447
+2026-11-19 08:46:30,634 INFO fold 0 epoch 36 | train 0.0248 | val loss 0.0684 F1 0.930 R 0.868
+2026-11-19 08:46:39,868 INFO fold 0 epoch 37 | train 0.0286 | val loss 0.0815 F1 0.930 R 0.868
+2026-11-19 08:46:48,995 INFO fold 0 epoch 38 | train 0.0203 | val loss 0.0735 F1 0.914 R 0.842
+2026-11-19 08:46:58,095 INFO fold 0 epoch 39 | train 0.0143 | val loss 0.0725 F1 0.914 R 0.842
+2026-11-19 08:47:07,365 INFO fold 0 epoch 40 | train 0.0246 | val loss 0.1559 F1 0.609 R 0.553
+2026-11-19 08:47:16,564 INFO fold 0 epoch 41 | train 0.0196 | val loss 0.3744 F1 0.690 R 0.526
+2026-11-19 08:47:25,780 INFO fold 0 epoch 42 | train 0.0431 | val loss 0.1092 F1 0.857 R 0.947
+2026-11-19 08:47:34,967 INFO fold 0 epoch 43 | train 0.0166 | val loss 0.0620 F1 0.935 R 0.947
+2026-11-19 08:47:44,315 INFO fold 0 epoch 44 | train 0.0132 | val loss 0.0746 F1 0.919 R 0.895
+2026-11-19 08:47:53,483 INFO fold 0 epoch 45 | train 0.0093 | val loss 0.0624 F1 0.914 R 0.842
+2026-11-19 08:48:02,810 INFO fold 0 epoch 46 | train 0.0238 | val loss 0.3218 F1 0.667 R 0.500
+2026-11-19 08:48:12,040 INFO fold 0 epoch 47 | train 0.0128 | val loss 0.0466 F1 0.959 R 0.921
+2026-11-19 08:48:21,280 INFO fold 0 epoch 48 | train 0.0070 | val loss 0.2008 F1 0.774 R 0.632
+2026-11-19 08:48:30,637 INFO fold 0 epoch 49 | train 0.0253 | val loss 0.2581 F1 0.667 R 0.632
+2026-11-19 08:48:40,598 INFO fold 0 TEST (frame level): acc 0.763 P 0.371 R 0.913 spec 0.738 F1 0.527 | best epoch 32, T=1.13

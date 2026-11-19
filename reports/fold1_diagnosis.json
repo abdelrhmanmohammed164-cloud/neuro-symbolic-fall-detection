@@ -1,0 +1,105 @@
+{
+ "fold": 1,
+ "best_epoch": 44,
+ "metrics": {
+  "train": {
+   "n": 2463,
+   "tp": 330,
+   "tn": 2100,
+   "fp": 1,
+   "fn": 32,
+   "accuracy": 0.9866017052375152,
+   "precision": 0.9969788519637462,
+   "recall_sensitivity": 0.9116022099447514,
+   "specificity": 0.9995240361732508,
+   "f1": 0.9523809523809523,
+   "false_positive_rate": 0.00047596382674916705,
+   "false_negative_rate": 0.08839779005524862,
+   "confusion_matrix": [
+    [
+     2100,
+     1
+    ],
+    [
+     32,
+     330
+    ]
+   ]
+  },
+  "val": {
+   "n": 1211,
+   "tp": 161,
+   "tn": 1032,
+   "fp": 7,
+   "fn": 11,
+   "accuracy": 0.9851362510322048,
+   "precision": 0.9583333333333334,
+   "recall_sensitivity": 0.936046511627907,
+   "specificity": 0.9932627526467758,
+   "f1": 0.9470588235294117,
+   "false_positive_rate": 0.006737247353224254,
+   "false_negative_rate": 0.06395348837209303,
+   "confusion_matrix": [
+    [
+     1032,
+     7
+    ],
+    [
+     11,
+     161
+    ]
+   ]
+  },
+  "test": {
+   "n": 5849,
+   "tp": 502,
+   "tn": 4695,
+   "fp": 233,
+   "fn": 419,
+   "accuracy": 0.8885279534963242,
+   "precision": 0.6829931972789116,
+   "recall_sensitivity": 0.5450597176981542,
+   "specificity": 0.9527191558441559,
+   "f1": 0.606280193236715,
+   "false_positive_rate": 0.04728084415584415,
+   "false_negative_rate": 0.4549402823018458,
+   "confusion_matrix": [
+    [
+     4695,
+     233
+    ],
+    [
+     419,
+     502
+    ]
+   ]
+  },
+  "baseline: always non-fall": {
+   "n": 5849,
+   "tp": 0,
+   "tn": 4928,
+   "fp": 0,
+   "fn": 921,
+   "accuracy": 0.8425371858437339,
+   "precision": NaN,
+   "recall_sensitivity": 0.0,
+   "specificity": 1.0,
+   "f1": 0.0,
+   "false_positive_rate": 0.0,
+   "false_negative_rate": 1.0,
+   "confusion_matrix": [
+    [
+     4928,
+     0
+    ],
+    [
+     921,
+     0
+    ]
+   ]
+  }
+ },
+ "train_test_f1_gap": 0.3461007591442373,
+ "val_loss_rising": true,
+ "verdict": "LEARNING: test performance is well above baseline and close to training performance"
+}

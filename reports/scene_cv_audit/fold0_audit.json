@@ -1,0 +1,584 @@
+{
+ "phase1": {
+  "recomputed": {
+   "n": 6087,
+   "tp": 805,
+   "tn": 3839,
+   "fp": 1366,
+   "fn": 77,
+   "accuracy": 0.7629374075899458,
+   "precision": 0.3707968678028558,
+   "recall_sensitivity": 0.9126984126984127,
+   "specificity": 0.7375600384245917,
+   "f1": 0.5273501473960039,
+   "false_positive_rate": 0.2624399615754083,
+   "false_negative_rate": 0.0873015873015873,
+   "confusion_matrix": [
+    [
+     3839,
+     1366
+    ],
+    [
+     77,
+     805
+    ]
+   ]
+  },
+  "consistent_with_result_and_diagnosis": true,
+  "labels_match_frame_label_files": true,
+  "every_test_frame_once": true,
+  "duplicate_frame_rows": 0,
+  "n_test_frames": 6087,
+  "best_epoch_from_history": 32,
+  "best_epoch_reported": 32,
+  "min_val_loss_epoch": 32,
+  "sequence_metrics_saved": {
+   "n": 41,
+   "tp": 18,
+   "tn": 1,
+   "fp": 22,
+   "fn": 0,
+   "accuracy": 0.4634146341463415,
+   "precision": 0.45,
+   "recall_sensitivity": 1.0,
+   "specificity": 0.043478260869565216,
+   "f1": 0.6206896551724138,
+   "false_positive_rate": 0.9565217391304348,
+   "false_negative_rate": 0.0,
+   "confusion_matrix": [
+    [
+     1,
+     22
+    ],
+    [
+     0,
+     18
+    ]
+   ]
+  },
+  "temperature": 1.1250132322311401,
+  "diagnosis_verdict": "LEARNS A TRANSFERABLE SIGNAL, BUT WITH A LARGE GENERALISATION GAP (train F1 0.97 vs held-out F1 0.53, gap 0.44)",
+  "diagnosis_gap": 0.4394017707625638
+ },
+ "class_balance": {
+  "train": {
+   "videos_fall": 10,
+   "videos_adl": 13,
+   "frames": 4618,
+   "fall_frames": 777,
+   "fall_frame_frac": 0.16825465569510611
+  },
+  "val": {
+   "videos_fall": 2,
+   "videos_adl": 4,
+   "frames": 1231,
+   "fall_frames": 144,
+   "fall_frame_frac": 0.11697806661251016
+  },
+  "test": {
+   "videos_fall": 18,
+   "videos_adl": 23,
+   "frames": 6087,
+   "fall_frames": 882,
+   "fall_frame_frac": 0.1448989650073928
+  },
+  "train_windows_epoch0": {
+   "n": 1472,
+   "pos": 478,
+   "neg": 941,
+   "excluded_w0": 53,
+   "pos_weight": 1.9686192468619246,
+   "pos_weight_range_over_epochs": [
+    1.9420289855072463,
+    2.23963133640553
+   ]
+  }
+ },
+ "window_labels": {
+  "train_windows_ending_on_fall_frame_50ep": 25893,
+  "excluded_weight0": 3009,
+  "excluded_frac_of_fall_windows": 0.116209014019233,
+  "trained_pos_windows_frames_after_onset": {
+   "p10": 15.0,
+   "median": 43.0,
+   "p90": 73.0
+  },
+  "train_fall_frames_by_urfd_phase": {
+   "falling(0)": 300,
+   "lying(1)": 477
+  },
+  "test_fall_frames_in_first_9_after_onset": 162
+ },
+ "scenes": {
+  "A4": {
+   "role_fold1": "test",
+   "n": 12,
+   "falls": 0,
+   "T": 250.0,
+   "miss": 0.10794878706199461,
+   "conf": 0.8891114294528961,
+   "neck_y": 0.3836113065481186,
+   "neck_y_last": 0.38516389578580856,
+   "scale": 0.15611211210489273,
+   "motion": 0.005812051938846707,
+   "fps": 33.333333333333336
+  },
+  "A5": {
+   "role_fold1": "train/val",
+   "n": 11,
+   "falls": 0,
+   "T": 180.0,
+   "miss": 0.054285714285714284,
+   "conf": 0.9698553085327148,
+   "neck_y": 0.37830325961112976,
+   "neck_y_last": 0.5087013244628906,
+   "scale": 0.1722453534603119,
+   "motion": 0.0037993991281837225,
+   "fps": 32.25806451612903
+  },
+  "A6": {
+   "role_fold1": "test",
+   "n": 6,
+   "falls": 0,
+   "T": 97.5,
+   "miss": 0.0,
+   "conf": 0.983445793390274,
+   "neck_y": 0.44646506011486053,
+   "neck_y_last": 0.4871567636728287,
+   "scale": 0.10773184150457382,
+   "motion": 0.002894590958021581,
+   "fps": 31.28054740957967
+  },
+  "A7": {
+   "role_fold1": "train/val",
+   "n": 6,
+   "falls": 0,
+   "T": 342.5,
+   "miss": 0.11622758194186766,
+   "conf": 0.892652839422226,
+   "neck_y": 0.5118032991886139,
+   "neck_y_last": 0.8919769525527954,
+   "scale": 0.11735817044973373,
+   "motion": 0.004573497222736478,
+   "fps": 29.41176470588235
+  },
+  "A8": {
+   "role_fold1": "test",
+   "n": 5,
+   "falls": 0,
+   "T": 200.0,
+   "miss": 0.09928571428571428,
+   "conf": 0.9101590514183044,
+   "neck_y": 0.731031596660614,
+   "neck_y_last": 0.7360038757324219,
+   "scale": 0.08835203945636749,
+   "motion": 0.0038698764983564615,
+   "fps": 29.41176470588235
+  },
+  "F1": {
+   "role_fold1": "test",
+   "n": 18,
+   "falls": 18,
+   "T": 70.5,
+   "miss": 0.07563775510204082,
+   "conf": 0.9337455332279205,
+   "neck_y": 0.6297344863414764,
+   "neck_y_last": 0.9227430820465088,
+   "scale": 0.13236086070537567,
+   "motion": 0.007926589343696833,
+   "fps": 30.303030303030305
+  },
+  "F2": {
+   "role_fold1": "train/val",
+   "n": 12,
+   "falls": 12,
+   "T": 130.0,
+   "miss": 0.04282001782001782,
+   "conf": 0.9371335208415985,
+   "neck_y": 0.5460983514785767,
+   "neck_y_last": 0.9238723516464233,
+   "scale": 0.2047753781080246,
+   "motion": 0.0069735117722302675,
+   "fps": 30.303030303030305
+  }
+ },
+ "errors": {
+  "fn_total": 77,
+  "fp_total": 1366,
+  "fn_by_phase": {
+   "onset_first9": 55,
+   "falling_phase": 22
+  },
+  "fn_top3_videos_share": 0.4935064935064935,
+  "fn_by_video": [
+   [
+    19,
+    "fall-27"
+   ],
+   [
+    11,
+    "fall-19"
+   ],
+   [
+    8,
+    "fall-25"
+   ],
+   [
+    8,
+    "fall-23"
+   ],
+   [
+    8,
+    "fall-21"
+   ],
+   [
+    8,
+    "fall-20"
+   ],
+   [
+    5,
+    "fall-22"
+   ],
+   [
+    4,
+    "fall-15"
+   ],
+   [
+    3,
+    "fall-13"
+   ],
+   [
+    2,
+    "fall-17"
+   ],
+   [
+    1,
+    "fall-29"
+   ],
+   [
+    0,
+    "fall-30"
+   ],
+   [
+    0,
+    "fall-28"
+   ],
+   [
+    0,
+    "fall-26"
+   ],
+   [
+    0,
+    "fall-24"
+   ],
+   [
+    0,
+    "fall-18"
+   ],
+   [
+    0,
+    "fall-16"
+   ],
+   [
+    0,
+    "fall-14"
+   ]
+  ],
+  "fp_top3_videos_share": 0.2767203513909224,
+  "fp_by_video": [
+   [
+    166,
+    "adl-16"
+   ],
+   [
+    113,
+    "adl-21"
+   ],
+   [
+    99,
+    "adl-19"
+   ],
+   [
+    99,
+    "adl-13"
+   ],
+   [
+    95,
+    "adl-18"
+   ],
+   [
+    90,
+    "adl-20"
+   ],
+   [
+    87,
+    "adl-12"
+   ],
+   [
+    81,
+    "adl-17"
+   ],
+   [
+    80,
+    "adl-15"
+   ],
+   [
+    72,
+    "adl-29"
+   ],
+   [
+    63,
+    "adl-22"
+   ],
+   [
+    59,
+    "adl-14"
+   ],
+   [
+    50,
+    "adl-23"
+   ],
+   [
+    38,
+    "adl-26"
+   ],
+   [
+    37,
+    "adl-24"
+   ],
+   [
+    31,
+    "adl-31"
+   ],
+   [
+    18,
+    "adl-34"
+   ],
+   [
+    12,
+    "fall-13"
+   ],
+   [
+    11,
+    "fall-26"
+   ],
+   [
+    10,
+    "adl-35"
+   ],
+   [
+    8,
+    "fall-28"
+   ],
+   [
+    8,
+    "fall-14"
+   ],
+   [
+    6,
+    "fall-30"
+   ],
+   [
+    6,
+    "fall-25"
+   ],
+   [
+    6,
+    "adl-28"
+   ],
+   [
+    5,
+    "adl-27"
+   ],
+   [
+    4,
+    "fall-16"
+   ],
+   [
+    3,
+    "fall-20"
+   ],
+   [
+    3,
+    "fall-18"
+   ],
+   [
+    3,
+    "adl-33"
+   ],
+   [
+    3,
+    "adl-32"
+   ]
+  ],
+  "events": {
+   "falls": 18,
+   "detected": 18,
+   "missed": [],
+   "latency_s_median": 0.016666666666666666,
+   "latency_s_max": 0.6333333333333333,
+   "latency_s_all": {
+    "fall-13": 0.1,
+    "fall-14": 0.0,
+    "fall-15": 0.13333333333333333,
+    "fall-16": 0.0,
+    "fall-17": 0.06666666666666667,
+    "fall-18": 0.0,
+    "fall-19": 0.36666666666666664,
+    "fall-20": 0.0,
+    "fall-21": 0.26666666666666666,
+    "fall-22": 0.16666666666666666,
+    "fall-23": 0.26666666666666666,
+    "fall-24": 0.0,
+    "fall-25": 0.0,
+    "fall-26": 0.0,
+    "fall-27": 0.6333333333333333,
+    "fall-28": 0.0,
+    "fall-29": 0.03333333333333333,
+    "fall-30": 0.0
+   },
+   "fall_videos_with_alarm_before_onset": [
+    "fall-13",
+    "fall-14",
+    "fall-16",
+    "fall-18",
+    "fall-20",
+    "fall-25",
+    "fall-26",
+    "fall-28",
+    "fall-30"
+   ]
+  },
+  "adl": {
+   "videos": 23,
+   "with_any_false_alarm": [
+    "adl-12",
+    "adl-13",
+    "adl-14",
+    "adl-15",
+    "adl-16",
+    "adl-17",
+    "adl-18",
+    "adl-19",
+    "adl-20",
+    "adl-21",
+    "adl-22",
+    "adl-23",
+    "adl-24",
+    "adl-26",
+    "adl-27",
+    "adl-28",
+    "adl-29",
+    "adl-31",
+    "adl-32",
+    "adl-33",
+    "adl-34",
+    "adl-35"
+   ],
+   "fa_episodes": 38,
+   "adl_minutes": 2.6255555555555556,
+   "fa_episodes_per_min": 14.473127380448583
+  },
+  "grouping": {
+   "FN": {
+    "n": 77,
+    "mean_missing_frac": 0.0,
+    "mean_conf": 0.9945259550949196,
+    "padded_frac": 1.0,
+    "neck_y_median": 0.45814329385757446
+   },
+   "TP": {
+    "n": 805,
+    "mean_missing_frac": 0.022531352694133273,
+    "mean_conf": 0.9625347189281298,
+    "padded_frac": 0.8596273291925466,
+    "neck_y_median": 0.7442868649959564
+   },
+   "FP": {
+    "n": 1366,
+    "mean_missing_frac": 0.21739926881832097,
+    "mean_conf": 0.8273975100384624,
+    "padded_frac": 0.6259150805270863,
+    "neck_y_median": 0.4038448929786682
+   },
+   "TN": {
+    "n": 3839,
+    "mean_missing_frac": 0.056436831582100895,
+    "mean_conf": 0.9312694983173081,
+    "padded_frac": 0.3730138056785621,
+    "neck_y_median": 0.44685739278793335
+   }
+  }
+ },
+ "uncertainty_video_bootstrap": {
+  "B": 5000,
+  "frame_f1": [
+   0.5273501473960039,
+   0.45469485521809694,
+   0.6110292216566426
+  ],
+  "event_recall": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "adl_videos_without_false_alarm": [
+   0.043478260869565216,
+   0.0,
+   0.13043478260869565
+  ]
+ },
+ "leakage_data_checks": {
+  "near_duplicate_group_positions": {
+   "adl-25": "test",
+   "adl-27": "test",
+   "adl-29": "test"
+  },
+  "scene_of_val": [
+   "A5",
+   "A7",
+   "F2"
+  ],
+  "scene_of_train": [
+   "A5",
+   "A7",
+   "F2"
+  ],
+  "scene_of_test": [
+   "A4",
+   "A6",
+   "A8",
+   "F1"
+  ],
+  "scene_class_purity": {
+   "A4": [
+    0,
+    12
+   ],
+   "A5": [
+    0,
+    11
+   ],
+   "A6": [
+    0,
+    6
+   ],
+   "A7": [
+    0,
+    6
+   ],
+   "A8": [
+    0,
+    5
+   ],
+   "F1": [
+    18,
+    18
+   ],
+   "F2": [
+    12,
+    12
+   ]
+  }
+ }
+}

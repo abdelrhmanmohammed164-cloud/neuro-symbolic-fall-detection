@@ -1,0 +1,29 @@
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# large or regenerable data (see the READMEs for how to get them)
+URFD/*
+!URFD/README.md
+!URFD/features/
+URFD/features/*
+!URFD/features/README_features.md
+!URFD/features/urfall-cam0-falls.csv
+!URFD/features/urfall-cam0-adls.csv
+fall_detection_models/weights/*
+!fall_detection_models/weights/README.md
+fall_detection_models/code/Depth-Anything-V2/
+fall_detection_models/code/rtmlib/
+fall_detection_models/code/st-gcn/
+checkpoints/
+logs/
+tests/work/
+
+# training outputs: keep results, not model files
+*.pt
+*.pth
+*.onnx
+runs/*/*/last_checkpoint.pt
+runs/*/*/best_checkpoint.pt

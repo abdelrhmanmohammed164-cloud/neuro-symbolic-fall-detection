@@ -1,0 +1,77 @@
+[
+ {
+  "test": "01 dataset loading",
+  "result": "PASS",
+  "evidence": "70 sequences (30 fall / 40 ADL), all (3, T, 14, 1) float32, frame labels for all"
+ },
+ {
+  "test": "02 skeleton graph topology",
+  "result": "PASS",
+  "evidence": "14 joints, 13 bones (tree, connected), 3 partitions column-normalised, bones and L/R pairs match names"
+ },
+ {
+  "test": "03 tensor shapes (N, C, T, V, M)",
+  "result": "PASS",
+  "evidence": "train item (3, 80, 14, 1); batch (8, 3, 80, 14, 1); eval windows = total frames = 11936"
+ },
+ {
+  "test": "04 coordinate / motion alignment (Eq. 3)",
+  "result": "PASS",
+  "evidence": "backward difference, 0 at t=1, 0 for missing joints, 0 on 25 padded frames; both streams from one tensor"
+ },
+ {
+  "test": "05 label mapping and window labels",
+  "result": "PASS",
+  "evidence": "frame labels = URFD rows with label 0/1 in all 30 falls, 0 in all 40 ADLs; end-frame labelling and onset-ignore verified on fall-01"
+ },
+ {
+  "test": "06 group-disjoint splits",
+  "result": "PASS",
+  "evidence": "scene: 2 folds OK; video: 5 folds OK"
+ },
+ {
+  "test": "07 duplicate leakage across splits",
+  "result": "PASS",
+  "evidence": "70 distinct skeleton hashes; no shared hash between train(+val) and test; near-duplicate group adl-25/27/29 kept together"
+ },
+ {
+  "test": "08 normalisation / preprocessing leakage",
+  "result": "PASS",
+  "evidence": "x/W,y/H is a fixed transform (identity here); no scaler/PCA/SMOTE in the pipeline; eval() leaves BN stats unchanged; with the TEST fold set to NaN, training loss, validation loss, checkpoint choice and temperature all stayed finite -> none of them reads test data"
+ },
+ {
+  "test": "09 forward pass",
+  "result": "PASS",
+  "evidence": "(5, 3, 80, 14, 1) -> logits (5,), finite; parameters 1,033,985"
+ },
+ {
+  "test": "10 backward pass",
+  "result": "PASS",
+  "evidence": "finite gradients reach both streams (|grad| coord 278.22, motion 274.93)"
+ },
+ {
+  "test": "11 tiny-subset overfitting",
+  "result": "PASS",
+  "evidence": "62 windows from 4 videos, 150 steps: train accuracy 1.000, final loss 0.0000"
+ },
+ {
+  "test": "12 checkpoint save / load",
+  "result": "PASS",
+  "evidence": "atomic save -> load gives identical weights and epoch; no temp files left"
+ },
+ {
+  "test": "13 interruption / resume",
+  "result": "PASS",
+  "evidence": "stopped after epoch 1 (exit 95, 2 epochs in history), resumed at epoch 2; final weights and all test probabilities identical to an uninterrupted run; history epochs [0, 1, 2, 3]; resume with a changed lr was refused"
+ },
+ {
+  "test": "14 validation metric correctness",
+  "result": "PASS",
+  "evidence": "matches sklearn on 1000 random samples; hand example TP2 FN1 FP1 TN1 correct; computed from one dataset-level confusion matrix"
+ },
+ {
+  "test": "15 padding shortcut removed",
+  "result": "PASS",
+  "evidence": "AUC of 'number of padded frames' for predicting the window label = 0.501 (0.5 = no information); before the fix 37% of fall windows vs 2% of non-fall windows were padded"
+ }
+]

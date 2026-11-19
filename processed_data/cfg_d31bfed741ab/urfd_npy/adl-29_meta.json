@@ -1,0 +1,57 @@
+{
+ "video_id": "adl-29",
+ "kind": "adls",
+ "n_frames": 125,
+ "image_hw": [
+  480,
+  640
+ ],
+ "timestamps_source": "data_csv",
+ "input_fp": "631b26eb661b0b240c4275458a3f7b37806c4e6cd662db7f890a3001c57646c2",
+ "config_fp": "d31bfed741ab6d41244da58283917681e5047d3b7fb8fa36d89f604aca0af977",
+ "config": {
+  "code_version": "preprocess-v1",
+  "chunk_size": 60,
+  "det_thr": 0.1,
+  "joint_conf_thr": 0.3,
+  "max_interp_gap": 5,
+  "smooth_window": 5,
+  "anchor_rule": "neck if both shoulders>=conf_thr else mid-hip if both hips>=conf_thr",
+  "depth_encoder": "vits",
+  "depth_input": 518,
+  "depth_small": [
+   120,
+   160
+  ],
+  "depth_patch": "3x3 median on depth_small",
+  "camera": "cam0",
+  "rtmo_sha256": "090096ca90f29163cc4f67137dcc0cd4b2ee95ea0af11764fbfda88dd2ae1140",
+  "depth_weights_sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378"
+ },
+ "chunks": [
+  {
+   "idx": 0,
+   "start": 0,
+   "end": 60,
+   "device": "mps/mps"
+  },
+  {
+   "idx": 1,
+   "start": 60,
+   "end": 120,
+   "device": "mps/mps"
+  },
+  {
+   "idx": 2,
+   "start": 120,
+   "end": 125,
+   "device": "mps/mps"
+  }
+ ],
+ "anchor_counts": {
+  "neck": 125,
+  "hip": 0,
+  "none": 0
+ },
+ "frames_with_person": 125
+}

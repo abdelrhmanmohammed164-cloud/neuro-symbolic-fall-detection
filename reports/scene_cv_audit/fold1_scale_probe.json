@@ -1,0 +1,30 @@
+{
+ "1.0": {
+  "falls_detected": "18/18",
+  "median_latency_frames": 4.0,
+  "mean_fall_frame_recall": 0.9169043568405557,
+  "adl_positive_frame_rate": 0.0,
+  "adl_videos_with_alarm": 0
+ },
+ "1.25": {
+  "falls_detected": "18/18",
+  "median_latency_frames": 3.0,
+  "mean_fall_frame_recall": 0.9415175527567684,
+  "adl_positive_frame_rate": 0.0,
+  "adl_videos_with_alarm": 0
+ },
+ "1.5": {
+  "falls_detected": "18/18",
+  "median_latency_frames": 3.0,
+  "mean_fall_frame_recall": 0.9349737095146836,
+  "adl_positive_frame_rate": 0.0004885197850512946,
+  "adl_videos_with_alarm": 1
+ },
+ "1.8": {
+  "falls_detected": "18/18",
+  "median_latency_frames": 5.0,
+  "mean_fall_frame_recall": 0.9022538609917837,
+  "adl_positive_frame_rate": 0.06424344579067985,
+  "adl_videos_with_alarm": 11
+ }
+}
