@@ -61,6 +61,7 @@ for var in ("A", "B", "C", "D"):
 root = os.environ.get("PROJECT_ROOT", os.path.abspath(os.path.join(HERE, "..", "..", "..")))
 sp_path, kin = os.path.join(root, "splits", "split_scene_v2.json"), os.path.join(root, "processed_data", "kinect_height")
 if os.path.exists(sp_path) and os.path.isdir(kin):
+    sys.path.append(os.path.join(root, 'archive', 'old_symbolic_code'))   # the original V3 now lives in archive/
     import symbolic_v3 as S3
     import evaluate_symbolic_v3 as E
     E.ROOT, E.NPY, E.KIN = root, os.path.join(root, "processed_data", "cfg_d31bfed741ab", "urfd_npy"), kin

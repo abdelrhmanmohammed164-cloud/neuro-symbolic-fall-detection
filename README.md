@@ -27,13 +27,11 @@ first dataset audit to the current experiments.
 | External test on GMDCSA-24 (`scripts/run_external_test.sh`) | Done: 160 unseen videos, 6 center models: MCC 0.505 (0.300 to 0.664), 64.5 of 79 falls, 59.7 of 81 ADL videos without false alarm; `reports/external_gmdcsa24/external_test.md` |
 | Final neural stream: ensemble (`neural_ensemble.py`) | Adopted: mean of the temperature-scaled probabilities of the 3 center seeds. On URFD out-of-fold (each fold's test videos scored only by that fold's 3 models): MCC 0.547, F1 0.619, precision 0.570. On GMDCSA-24 (all 6 models): MCC 0.530, precision 0.829. The decision was made after both test sets had been seen, so treat these numbers as post-hoc |
 | Symbolic stream: improved V3 (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Current version. Neck height in metres from the Kinect (`kinect_neck_height.py`), V3 rules (Eq. 8-10) with a 1 s descent window, a minimum drop and V3's latch; chosen per fold by inner group CV on train+val. Test folds (post-hoc): precision 0.796, recall 0.396, F1 0.528, MCC 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/` |
-| Fusion of the neural ensemble with the improved V3 (`fusion_v3_improved.py`) | Done, 5 parameter-free rules. Per-fold validation kept the neural ensemble in both folds. Test (post-hoc): veto+sym (neural vetoed when the neck is at 0.8 m or higher, OR the symbolic stream) MCC 0.651 vs 0.547, F1 0.700, precision 0.735, recall 0.668, 30/30 falls; paper Eq. 11-13 MCC 0.460; `reports/fusion_v3_improved/` |
-| Optional early-fall rule for the improved V3 (`early_fall.py`, flag, off by default) | Rejected: helped in one development fold, hurt in the other, thresholds differ 3x between folds, barely fires on GMDCSA-24; on the URFD test folds it recovered no extra neural miss and added false alarms. V3 kept unchanged; `reports/early_fall_rule/report.md` |
 
 Baseline on the two held-out scenes (pooled): 28 of 30 falls detected, but only 11 of 40 ADL videos free of false
 alarms; frame-level F1 0.555. Details and the reasons (camera angle, fall direction, lighting) are in the PDF.
 
-Earlier symbolic and fusion versions (the teammate's notebook, v2, original-V3 results, v4, fusion v1, the veto exemption) are no longer
+The active project is the neural ensemble and the improved V3 symbolic stream. Earlier symbolic and fusion versions (the teammate's notebook, v2, the original V3, v4, all fusion experiments, the early-fall rule) are no longer
 part of the active project; their code, reports and notebooks are in `archive/` and in the git history.
 
 ## Repository layout
