@@ -24,3 +24,9 @@ Rule: v3 replaces v2 only with a higher validation MCC. It did not, so v2 stays 
 
 The two disagree: validation (11 ADL videos from rooms A7 and A8) favours v2, the larger test set shows
 v3 with far fewer false alarms. Switching on the test result would be selecting on test data.
+
+## Decision
+The project adopts v3 and drops v2. The validation rule above had kept v2; the switch was made after the
+test folds were seen (fewer false alarms: 23 vs 7 clean ADL videos), so every v3 test number is post-hoc.
+v2's code was removed from the working tree (it stays in the git history, commit 6cb9450 and earlier).
+The fusion v1 report (reports/fusion_v1) was run with v2 and is kept only as a record.
