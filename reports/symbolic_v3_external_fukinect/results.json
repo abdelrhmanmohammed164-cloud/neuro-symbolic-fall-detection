@@ -1,0 +1,414 @@
+{
+ "fold0_D": {
+  "config": {
+   "variant": "D",
+   "tau_h": 0.6,
+   "tau_v": 0.8929,
+   "delta": 0.3,
+   "tau_s": 0.4453
+  },
+  "primary": {
+   "TP": 132,
+   "FP": 149,
+   "FN": 35,
+   "TN": 690,
+   "fall_detection_rate": 0.7904,
+   "adl_false_alarm_rate": 0.1776,
+   "precision": 0.4698,
+   "recall": 0.7904,
+   "F1": 0.5893,
+   "accuracy": 0.8171,
+   "balanced_accuracy": 0.8064,
+   "MCC": 0.5082,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.0958,
+    "lying": 0.7917,
+    "falling": 0.7904
+   },
+   "passes": false
+  },
+  "per_subject": {
+   "1": {
+    "falls": 8,
+    "detected": 6,
+    "adl": 40,
+    "adl_alarms": 10
+   },
+   "2": {
+    "falls": 8,
+    "detected": 4,
+    "adl": 40,
+    "adl_alarms": 12
+   },
+   "3": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "4": {
+    "falls": 8,
+    "detected": 6,
+    "adl": 40,
+    "adl_alarms": 6
+   },
+   "5": {
+    "falls": 8,
+    "detected": 5,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "6": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 7
+   },
+   "7": {
+    "falls": 7,
+    "detected": 7,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "8": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "9": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "10": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "11": {
+    "falls": 8,
+    "detected": 7,
+    "adl": 40,
+    "adl_alarms": 12
+   },
+   "12": {
+    "falls": 8,
+    "detected": 7,
+    "adl": 40,
+    "adl_alarms": 3
+   },
+   "13": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 5
+   },
+   "14": {
+    "falls": 8,
+    "detected": 2,
+    "adl": 39,
+    "adl_alarms": 2
+   },
+   "15": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 6
+   },
+   "16": {
+    "falls": 8,
+    "detected": 5,
+    "adl": 39,
+    "adl_alarms": 8
+   },
+   "17": {
+    "falls": 8,
+    "detected": 7,
+    "adl": 40,
+    "adl_alarms": 8
+   },
+   "18": {
+    "falls": 8,
+    "detected": 8,
+    "adl": 40,
+    "adl_alarms": 7
+   },
+   "19": {
+    "falls": 8,
+    "detected": 6,
+    "adl": 40,
+    "adl_alarms": 5
+   },
+   "20": {
+    "falls": 8,
+    "detected": 2,
+    "adl": 41,
+    "adl_alarms": 3
+   },
+   "21": {
+    "falls": 8,
+    "detected": 4,
+    "adl": 40,
+    "adl_alarms": 7
+   }
+  },
+  "sensitivity_20fps": {
+   "TP": 134,
+   "FP": 151,
+   "FN": 33,
+   "TN": 688,
+   "fall_detection_rate": 0.8024,
+   "adl_false_alarm_rate": 0.18,
+   "precision": 0.4702,
+   "recall": 0.8024,
+   "F1": 0.5929,
+   "accuracy": 0.8171,
+   "balanced_accuracy": 0.8112,
+   "MCC": 0.514,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.1257,
+    "lying": 0.7738,
+    "falling": 0.8024
+   },
+   "passes": true
+  },
+  "sensitivity_global_floor": {
+   "TP": 132,
+   "FP": 148,
+   "FN": 35,
+   "TN": 691,
+   "fall_detection_rate": 0.7904,
+   "adl_false_alarm_rate": 0.1764,
+   "precision": 0.4714,
+   "recall": 0.7904,
+   "F1": 0.5906,
+   "accuracy": 0.8181,
+   "balanced_accuracy": 0.807,
+   "MCC": 0.5098,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.1198,
+    "lying": 0.7619,
+    "falling": 0.7904
+   },
+   "passes": false
+  }
+ },
+ "fold1_C": {
+  "config": {
+   "variant": "C",
+   "tau_h": 0.4,
+   "tau_v": 0.7321,
+   "delta": 0.4,
+   "tau_s": 0.4359
+  },
+  "primary": {
+   "TP": 17,
+   "FP": 3,
+   "FN": 150,
+   "TN": 836,
+   "fall_detection_rate": 0.1018,
+   "adl_false_alarm_rate": 0.0036,
+   "precision": 0.85,
+   "recall": 0.1018,
+   "F1": 0.1818,
+   "accuracy": 0.8479,
+   "balanced_accuracy": 0.5491,
+   "MCC": 0.2618,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.0,
+    "lying": 0.0179,
+    "falling": 0.1018
+   },
+   "passes": false
+  },
+  "per_subject": {
+   "1": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "2": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "3": {
+    "falls": 8,
+    "detected": 3,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "4": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "5": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "6": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "7": {
+    "falls": 7,
+    "detected": 2,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "8": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "9": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "10": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "11": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "12": {
+    "falls": 8,
+    "detected": 1,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "13": {
+    "falls": 8,
+    "detected": 4,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "14": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 39,
+    "adl_alarms": 0
+   },
+   "15": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "16": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 39,
+    "adl_alarms": 0
+   },
+   "17": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 1
+   },
+   "18": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 1
+   },
+   "19": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 40,
+    "adl_alarms": 0
+   },
+   "20": {
+    "falls": 8,
+    "detected": 0,
+    "adl": 41,
+    "adl_alarms": 0
+   },
+   "21": {
+    "falls": 8,
+    "detected": 2,
+    "adl": 40,
+    "adl_alarms": 1
+   }
+  },
+  "sensitivity_20fps": {
+   "TP": 18,
+   "FP": 4,
+   "FN": 149,
+   "TN": 835,
+   "fall_detection_rate": 0.1078,
+   "adl_false_alarm_rate": 0.0048,
+   "precision": 0.8182,
+   "recall": 0.1078,
+   "F1": 0.1905,
+   "accuracy": 0.8479,
+   "balanced_accuracy": 0.5515,
+   "MCC": 0.2621,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.006,
+    "lying": 0.0179,
+    "falling": 0.1078
+   },
+   "passes": false
+  },
+  "sensitivity_global_floor": {
+   "TP": 19,
+   "FP": 3,
+   "FN": 148,
+   "TN": 836,
+   "fall_detection_rate": 0.1138,
+   "adl_false_alarm_rate": 0.0036,
+   "precision": 0.8636,
+   "recall": 0.1138,
+   "F1": 0.2011,
+   "accuracy": 0.8499,
+   "balanced_accuracy": 0.5551,
+   "MCC": 0.2803,
+   "per_action_alarm_rate": {
+    "walking": 0.0,
+    "bending": 0.0,
+    "sitting": 0.0,
+    "squatting": 0.0,
+    "lying": 0.0179,
+    "falling": 0.1138
+   },
+   "passes": false
+  }
+ }
+}
