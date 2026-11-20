@@ -26,12 +26,14 @@ first dataset audit to the current experiments.
 | Final test evaluation (`scripts/run_final_test.sh`, post-hoc) | Done: neck-centred ST-GCN, mean over 3 seeds, both held-out scenes pooled: MCC 0.50, F1 0.58, 28 of 30 falls detected, 21.7 of 40 ADL videos without false alarm; `reports/final_test/final_test.md` |
 | External test on GMDCSA-24 (`scripts/run_external_test.sh`) | Done: 160 unseen videos, 6 center models: MCC 0.505 (0.300 to 0.664), 64.5 of 79 falls, 59.7 of 81 ADL videos without false alarm; `reports/external_gmdcsa24/external_test.md` |
 | Final neural stream: ensemble (`neural_ensemble.py`) | Adopted: mean of the temperature-scaled probabilities of the 3 center seeds. On URFD out-of-fold (each fold's test videos scored only by that fold's 3 models): MCC 0.547, F1 0.619, precision 0.570. On GMDCSA-24 (all 6 models): MCC 0.530, precision 0.829. The decision was made after both test sets had been seen, so treat these numbers as post-hoc |
-| Symbolic stream v3 (neck height in metres from the Kinect, Eq. 1, 7 to 10) | Done: `symbolic_v3.py`, `kinect_neck_height.py`. Test folds (post-hoc): trigger MCC 0.402, precision 0.735, 30/30 falls, 23/40 ADL videos without false alarm; `reports/symbolic_v3/results.md` |
-| Symbolic V3 precision study (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Done: selected per fold by inner group CV on train+val. Test folds (post-hoc): precision 0.736 -> 0.796, recall 0.255 -> 0.396, F1 0.379 -> 0.528, MCC 0.384 -> 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/report.md`. Original V3 kept (`symbolic_v3.py`, `symbolic_v3_original.py`). Notebooks moved to `archive/notebooks` |
-| Fusion (Eq. 11 to 13) | Not started |
+| Symbolic stream: improved V3 (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Current version. Neck height in metres from the Kinect (`kinect_neck_height.py`), V3 rules (Eq. 8-10) with a 1 s descent window, a minimum drop and V3's latch; chosen per fold by inner group CV on train+val. Test folds (post-hoc): precision 0.796, recall 0.396, F1 0.528, MCC 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/` |
+| Fusion of the neural ensemble with the improved V3 (`fusion_v3_improved.py`) | Done, 5 parameter-free rules. Per-fold validation kept the neural ensemble in both folds. Test (post-hoc): veto+sym (neural vetoed when the neck is at 0.8 m or higher, OR the symbolic stream) MCC 0.651 vs 0.547, F1 0.700, precision 0.735, recall 0.668, 30/30 falls; paper Eq. 11-13 MCC 0.460; `reports/fusion_v3_improved/` |
 
 Baseline on the two held-out scenes (pooled): 28 of 30 falls detected, but only 11 of 40 ADL videos free of false
 alarms; frame-level F1 0.555. Details and the reasons (camera angle, fall direction, lighting) are in the PDF.
+
+Earlier symbolic and fusion versions (the teammate's notebook, v2, original-V3 results, v4, fusion v1) are no longer
+part of the active project; their code, reports and notebooks are in `archive/` and in the git history.
 
 ## Repository layout
 

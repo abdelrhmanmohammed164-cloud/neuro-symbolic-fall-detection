@@ -158,6 +158,6 @@ python3 fall_detection_models/code/stgcn_urfd/tests_symbolic_v3_improved.py  # 3
 python3 fall_detection_models/code/stgcn_urfd/evaluate_symbolic_v3.py        # whole study, a few minutes
 python3 fall_detection_models/code/stgcn_urfd/plot_symbolic_v3.py            # figures
 ```
-Files: `symbolic_v3_improved.py` (model), `symbolic_v3.py` and `symbolic_v3_original.py` (untouched original),
+Files: `symbolic_v3_improved.py` (model), `symbolic_v3.py` (untouched original; byte-identical backup in `archive/old_symbolic_code/symbolic_v3_original.py`),
 `results.json`, `final_config.json`, `false_positives_A_inner_cv.csv`, `figures/`.
 Notebooks are no longer part of the active project (moved to `archive/notebooks`).
