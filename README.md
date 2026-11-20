@@ -25,6 +25,7 @@ first dataset audit to the current experiments.
 | Seed confirmation of exp04_center (`run_experiments.sh confirm`) | CONFIRMED: better than the same-seed baseline for all 3 seeds in both folds (MCC +0.15 to +0.44); `reports/experiments_mcc/seed_confirmation.md` |
 | Final test evaluation (`scripts/run_final_test.sh`, post-hoc) | Done: neck-centred ST-GCN, mean over 3 seeds, both held-out scenes pooled: MCC 0.50, F1 0.58, 28 of 30 falls detected, 21.7 of 40 ADL videos without false alarm; `reports/final_test/final_test.md` |
 | External test on GMDCSA-24 (`scripts/run_external_test.sh`) | Done: 160 unseen videos, 6 center models: MCC 0.505 (0.300 to 0.664), 64.5 of 79 falls, 59.7 of 81 ADL videos without false alarm; `reports/external_gmdcsa24/external_test.md` |
+| Final neural stream: ensemble (`neural_ensemble.py`) | Adopted: mean of the temperature-scaled probabilities of the 3 center seeds. On URFD out-of-fold (each fold's test videos scored only by that fold's 3 models): MCC 0.547, F1 0.619, precision 0.570. On GMDCSA-24 (all 6 models): MCC 0.530, precision 0.829. The decision was made after both test sets had been seen, so treat these numbers as post-hoc |
 | Symbolic stream (neck height in metres, Eq. 1, 7 to 10) | Not started |
 | Fusion (Eq. 11 to 13) | Not started |
 
