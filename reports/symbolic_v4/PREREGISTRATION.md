@@ -44,3 +44,10 @@ It is adopted for fold k only if VAL MCC >= neural VAL MCC + 0.02, VAL falls det
 VAL ADL videos without false alarm not lower. Otherwise fold k keeps the neural ensemble alone.
 The TEST folds are then scored once with each fold's choice. All other options are also reported on TEST
 for transparency, marked as not selected.
+
+## Amendment 1: implementation bug found after the first run
+The first run did not follow the definition above: it read URFD 3-class labels from the ADL file too, where
+0/1 mark postures (for example lying on a bed), so ADL frames entered the 'lying' set. tau_low became
+0.52 m (fold 0) and 1.34 m (fold 1) and delta_fall 0.11 / 0.29 m, instead of about 0.42 / 0.34 m and
+0.36 / 0.58 m. The loader now takes 3-class labels from fall videos only, as registered. Nothing else
+changed. The first run is kept as results_run1_bug.json and reported.

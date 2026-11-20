@@ -108,7 +108,8 @@ def drop_into_lying(h, lab3):
 
 
 def fit(train, use_descending=True, unknown_hold=30):
-    """train: list of (h, binary labels, URFD 3-class labels) for TRAINING videos only."""
+    """train: list of (h, binary labels, URFD 3-class labels) for TRAINING videos only. The 3-class labels
+    must be -1 for ADL videos (URFD's ADL file uses 0/1 for postures such as lying on a bed, not for falls)."""
     lying = np.concatenate([h[(l3 == 1) & ~np.isnan(h)] for h, _, l3 in train])
     drops = [d for d in (drop_into_lying(h, l3) for h, _, l3 in train) if d is not None]
     tau_low = float(np.percentile(lying, 95))

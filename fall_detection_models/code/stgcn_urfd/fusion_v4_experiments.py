@@ -45,7 +45,9 @@ def load_all():
     data = {}
     for v in sorted(split["group_of"]):
         y = np.load(os.path.join(NPY, f"{v}_frame_labels.npy")).astype(int)
-        l3 = np.full(len(y), -1); d = U[U.v == v]; i = d.f.values - 1; ok = i < len(y); l3[i[ok]] = d.lab.values[ok]
+        l3 = np.full(len(y), -1)
+        if v.startswith("fall"):            # fall phases only; the ADL file's 0/1 codes mark postures, not falls
+            d = U[U.v == v]; i = d.f.values - 1; ok = i < len(y); l3[i[ok]] = d.lab.values[ok]
         data[v] = dict(y=y, l3=l3, h=S3.load_height(KIN, v), room=split["group_of"][v])
     return split, data
 
