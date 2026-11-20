@@ -27,3 +27,6 @@ tests/work/
 *.onnx
 runs/*/*/last_checkpoint.pt
 runs/*/*/best_checkpoint.pt
+
+# external test data (download: see scripts/run_external_test.sh)
+external_data/GMDCSA24/
