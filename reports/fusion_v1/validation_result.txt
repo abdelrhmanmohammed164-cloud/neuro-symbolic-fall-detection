@@ -1,0 +1,8 @@
+fold 0: tau_h=0.550 tau_v=0.375 tau_s=0.359 train trigger MCC=0.439
+fold 1: tau_h=0.750 tau_v=0.375 tau_s=0.130 train trigger MCC=0.502
+val N  neural ensemble {'MCC': np.float64(0.678), 'F1': np.float64(0.714), 'Prec': np.float64(0.654), 'Rec': np.float64(0.786), 'Spec': np.float64(0.947), 'Acc': np.float64(0.929), 'falls': '6/6', 'adl_clean': '7/11', 'fa_min': 3.99}
+val S  symbolic trigger {'MCC': np.float64(0.355), 'F1': np.float64(0.41), 'Prec': np.float64(0.492), 'Rec': np.float64(0.352), 'Spec': np.float64(0.954), 'Acc': np.float64(0.886), 'falls': '6/6', 'adl_clean': '1/11', 'fa_min': 6.84}
+val F  fused Eq.11-13 {'MCC': np.float64(0.485), 'F1': np.float64(0.544), 'Prec': np.float64(0.538), 'Rec': np.float64(0.55), 'Spec': np.float64(0.94), 'Acc': np.float64(0.896), 'falls': '5/6', 'adl_clean': '5/11', 'fa_min': 6.27}
+val V  veto only {'MCC': np.float64(0.526), 'F1': np.float64(0.576), 'Prec': np.float64(0.605), 'Rec': np.float64(0.55), 'Spec': np.float64(0.955), 'Acc': np.float64(0.909), 'falls': '5/6', 'adl_clean': '7/11', 'fa_min': 3.42}
+DECISION F: REJECT
+DECISION V: REJECT
