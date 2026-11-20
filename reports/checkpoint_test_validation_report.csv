@@ -1,5 +1,0 @@
-video_id,status,chunks_total,chunks_valid,chunks_recorded,outputs_ok,issues
-fall-91,COMPLETED,3,3,3,True,
-fall-92,COMPLETED,2,2,2,True,
-fall-93,COMPLETED,2,2,2,True,
-fall-94,COMPLETED,2,2,2,True,

@@ -57,24 +57,13 @@ for var in ("A", "B", "C", "D"):
     m = V.V3Improved(var, 0.40, 1.0, 0.4, 0.45); h = curve("fall"); h2 = h.copy(); h2[120:] = 1.35
     check(f"{var}: causal", (m.predict(V.Video(h))[:120] == m.predict(V.Video(h2))[:120]).all())
 
-# 4. variant A equals the original V3, and data/split checks
+# 4. data and split checks
 root = os.environ.get("PROJECT_ROOT", os.path.abspath(os.path.join(HERE, "..", "..", "..")))
 sp_path, kin = os.path.join(root, "splits", "split_scene_v2.json"), os.path.join(root, "processed_data", "kinect_height")
 if os.path.exists(sp_path) and os.path.isdir(kin):
-    sys.path.append(os.path.join(root, 'archive', 'old_symbolic_code'))   # the original V3 now lives in archive/
-    import symbolic_v3 as S3
     import evaluate_symbolic_v3 as E
     E.ROOT, E.NPY, E.KIN = root, os.path.join(root, "processed_data", "cfg_d31bfed741ab", "urfd_npy"), kin
     split, vids, _ = E.load()
-    f0 = split["folds"][0]
-    tr = f0["train"]
-    lying = np.concatenate([vids[v].hn[vids[v].lying] for v in tr if vids[v].lying is not None and vids[v].lying.any()])
-    orig, _ = S3.fit([(S3.load_height(kin, v), vids[v].y) for v in tr], lying)
-    new, _ = V.fit([vids[v] for v in tr], "A")
-    check("A thresholds equal original V3", abs(orig.tau_h - new.tau_h) < 1e-9 and abs(orig.tau_v - new.tau_v) < 1e-9,
-          f"orig {orig.tau_h:.3f}/{orig.tau_v:.3f} new {new.tau_h:.3f}/{new.tau_v:.3f}")
-    same = all((orig.predict(S3.load_height(kin, v))["trigger"] == new.predict(vids[v])).all() for v in f0["test"])
-    check("A predictions equal original V3 on every test video of fold 0", same)
     for f in split["folds"]:
         sel = f["train"] + f["val"]
         check(f"fold {f['fold']}: selection set and test disjoint", not (set(sel) & set(f["test"])))

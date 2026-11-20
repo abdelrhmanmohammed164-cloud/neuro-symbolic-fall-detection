@@ -5,7 +5,7 @@ The real files are only read; destructive tests use temporary copies.
 
 Usage:
   python tests_pretraining.py --data_dir .../urfd_npy --features_dir URFD/features \
-      --split_scene splits/split_scene.json --split_video splits/split_video.json --out reports/pretraining_tests.json
+      --split_scene splits/split_scene_v2.json --split_video splits/split_video_v2.json --out pretraining_tests.json
 """
 import argparse
 import csv

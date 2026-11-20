@@ -89,7 +89,7 @@ def window_by_end(x, end, window, n_real=None, pad_side="right"):
 
 
 def crop_window(x, start, window):
-    """Kept for check_sequence.py: frames [start, start+window), right-padded."""
+    """Frames [start, start+window), right-padded."""
     seg = x[:, start:start + window]
     if seg.shape[1] < window:
         seg = np.concatenate([seg, np.repeat(seg[:, -1:], window - seg.shape[1], axis=1)], axis=1)

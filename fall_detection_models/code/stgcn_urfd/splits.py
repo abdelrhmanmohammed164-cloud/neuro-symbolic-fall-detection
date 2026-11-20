@@ -17,7 +17,7 @@ the original split and its fingerprint are unchanged.
 
 Usage:
   python splits.py --data_dir processed/urfd_npy --scene_csv reports/scene_groups.csv \
-      --mode scene --out splits/split_scene.json
+      --mode scene --out splits/split_scene_v3.json
 """
 import argparse
 import csv

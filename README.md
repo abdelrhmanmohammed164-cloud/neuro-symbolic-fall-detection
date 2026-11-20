@@ -8,47 +8,29 @@ to the public [UR Fall Detection dataset (URFD)](https://fenix.ur.edu.pl/mkepski
 The paper's own data are not public, so this is an **adaptation, not a reproduction**: numbers here cannot be
 compared one to one with the paper's Table 4.
 
-**Start here:** [`reports/URFD_project_record.pdf`](reports/URFD_project_record.pdf) documents every step, from the
-first dataset audit to the current experiments.
+## Active models
 
-## Status
-
-| Part | State |
+| Part | Result |
 |---|---|
-| URFD download (camera 0, 70 videos) | Done |
-| Preprocessing: RTMO-l pose + Depth-Anything-V2 depth, checkpointed | Done, 70/70 videos, 0 failures |
-| Two-stream ST-GCN (paper Eq. 2 to 6) | Done |
-| Audit before training (leakage, shortcuts) | Done: `reports/ST-GCN_audit_report.md` |
-| Scene-disjoint baseline, both folds | Done: `reports/scene_cv_audit/` |
-| Validation redesign + 18 pre-training tests | Done |
-| Controlled experiments (`scripts/run_experiments.sh`) | Done: only `exp04_center` (neck-centred coordinates) passed the pre-registered rule; see `reports/experiments_mcc/comparison.md` |
-| Seed confirmation of exp04_center (`run_experiments.sh confirm`) | CONFIRMED: better than the same-seed baseline for all 3 seeds in both folds (MCC +0.15 to +0.44); `reports/experiments_mcc/seed_confirmation.md` |
-| Final test evaluation (`scripts/run_final_test.sh`, post-hoc) | Done: neck-centred ST-GCN, mean over 3 seeds, both held-out scenes pooled: MCC 0.50, F1 0.58, 28 of 30 falls detected, 21.7 of 40 ADL videos without false alarm; `reports/final_test/final_test.md` |
-| External test on GMDCSA-24 (`scripts/run_external_test.sh`) | Done: 160 unseen videos, 6 center models: MCC 0.505 (0.300 to 0.664), 64.5 of 79 falls, 59.7 of 81 ADL videos without false alarm; `reports/external_gmdcsa24/external_test.md` |
-| Final neural stream: ensemble (`neural_ensemble.py`) | Adopted: mean of the temperature-scaled probabilities of the 3 center seeds. On URFD out-of-fold (each fold's test videos scored only by that fold's 3 models): MCC 0.547, F1 0.619, precision 0.570. On GMDCSA-24 (all 6 models): MCC 0.530, precision 0.829. The decision was made after both test sets had been seen, so treat these numbers as post-hoc |
-| Symbolic stream: improved V3 (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Current version. Neck height in metres from the Kinect (`kinect_neck_height.py`), V3 rules (Eq. 8-10) with a 1 s descent window, a minimum drop and V3's latch; chosen per fold by inner group CV on train+val. Test folds (post-hoc): precision 0.796, recall 0.396, F1 0.528, MCC 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/` |
+| Neural stream: ensemble of 3 neck-centred ST-GCN seeds (`neural_ensemble.py`, `scripts/train_ensemble.sh`) | URFD out-of-fold: MCC 0.547, F1 0.619, precision 0.570. GMDCSA-24 (160 unseen videos, all 6 models): MCC 0.530, precision 0.829; `reports/external_gmdcsa24/external_test.md`. The ensemble was chosen after both test sets had been seen, so these numbers are post-hoc |
+| Symbolic stream: improved V3 (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Neck height in metres from the Kinect, V3 rules with a 1 s descent window, a minimum drop and V3's latch, chosen per fold by inner group CV on train+val. URFD test: precision 0.796, recall 0.396, F1 0.528, MCC 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/` |
+| External test of the improved V3 on FUKinect-Fall (21 new people, Kinect v1, no refitting) | fold 0 config: 132/167 falls, 18% of ADL clips with an alarm; fold 1 config: 17/167 falls. Neither passed the pre-registered rule; `reports/symbolic_v3_external_fukinect/report.md` |
 
-Baseline on the two held-out scenes (pooled): 28 of 30 falls detected, but only 11 of 40 ADL videos free of false
-alarms; frame-level F1 0.555. Details and the reasons (camera angle, fall direction, lighting) are in the PDF.
-
-The active project is the neural ensemble and the improved V3 symbolic stream. Earlier symbolic and fusion versions (the teammate's notebook, v2, the original V3, v4, all fusion experiments, the early-fall rule) are no longer
-part of the active project; their code, reports and notebooks are in `archive/` and in the git history.
+Earlier versions (the original V3, v2, v4, the fusion experiments, V3-norm, the audits and diagnostics) are only in the git history.
 
 ## Repository layout
 
 ```
 README.md
 requirements.txt
-scripts/                       one-command entry points (run from anywhere; they find the repo root)
+scripts/                       setup, preprocessing, ensemble training, external test
 fall_detection_models/
-  code/stgcn_urfd/             all project code (see its README.md)
+  code/stgcn_urfd/             project code (see its README.md)
   weights/                     NOT in git: model weights (see weights/README.md)
-URFD/                          NOT in git: raw dataset (see URFD/README.md); features/README_features.md is included
-processed_data/                preprocessed skeletons for all 70 videos (about 6 MB), ready for training
-splits/                        saved train/val/test splits; never regenerated silently
-runs/stgcn_scene/              baseline results (no model checkpoints)
-reports/                       audits, tests, diagnoses, the project record PDF
-tests/test_fall-01/            the single-video check figure
+URFD/                          NOT in git: raw dataset (see URFD/README.md); the feature CSVs are included
+processed_data/                preprocessed skeletons for all 70 videos
+splits/                        the saved splits (split_scene_v2.json, split_video_v2.json)
+reports/                       results of the active models
 ```
 
 ## Setup
@@ -61,13 +43,12 @@ cd neuro-symbolic-fall-detection
 bash scripts/setup_mac.sh            # creates .venv and installs requirements (works on Linux too)
 ```
 
-### Training only (no download needed)
+### Training the neural ensemble (no download needed)
 
-The preprocessed skeletons are in `processed_data/`, so the ST-GCN can be trained right away:
+The preprocessed skeletons are in `processed_data/`, so the models can be trained right away:
 
 ```bash
-bash scripts/run_experiments.sh quick    # 10-epoch trial of the whole pipeline, about 15 min on a Mac GPU
-bash scripts/run_experiments.sh          # full experiments: 7 runs x 2 folds x 50 epochs, about 3 hours
+bash scripts/train_ensemble.sh       # 3 seeds x 2 folds, then the out-of-fold ensemble predictions
 ```
 
 Every run is resumable: stop it and run the same command again. Training with batch 256 needs about 6 GB of RAM.
@@ -88,8 +69,8 @@ These come from the audits and keep the results honest:
   seen once, so any later number on them is post-hoc and must be reported as such.
 - **Never overwrite a split file.** `splits.py` refuses to; create a new file instead.
 - **New experiment, new folder.** `train.py` refuses to resume or overwrite a run made with different settings.
-- **Run the tests first.** `tests_pretraining.py` (18 tests) runs automatically before every training script;
-  training does not start if any test fails.
+- **Run the tests first.** `tests_pretraining.py` (18 tests) runs automatically before training, and training does
+  not start if any test fails. `tests_symbolic_v3_improved.py` checks the symbolic stream.
 - Report event-level results (falls detected, ADL videos with false alarms) with confidence intervals over videos,
   not only frame-level accuracy.
 
