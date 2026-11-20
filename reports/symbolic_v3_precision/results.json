@@ -1,0 +1,1741 @@
+{
+ "inner": {
+  "0": {
+   "A": {
+    "Precision": 0.5667,
+    "Recall": 0.2584,
+    "F1": 0.355,
+    "Accuracy": 0.8521,
+    "BalancedAccuracy": 0.6107,
+    "Specificity": 0.9631,
+    "MCC": 0.3125,
+    "TP": 238,
+    "FP": 182,
+    "TN": 4746,
+    "FN": 683,
+    "PositiveRate": 0.0718,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 2,
+    "adl": 17,
+    "alarms_per_min": 9.8221
+   },
+   "P": {
+    "Precision": 0.0962,
+    "Recall": 0.0054,
+    "F1": 0.0103,
+    "Accuracy": 0.8354,
+    "BalancedAccuracy": 0.4979,
+    "Specificity": 0.9905,
+    "MCC": -0.0159,
+    "TP": 5,
+    "FP": 47,
+    "TN": 4881,
+    "FN": 916,
+    "PositiveRate": 0.0089,
+    "falls_detected": 1,
+    "falls": 12,
+    "adl_clean": 15,
+    "adl": 17,
+    "alarms_per_min": 2.1352
+   },
+   "B": {
+    "Precision": 1.0,
+    "Recall": 0.4137,
+    "F1": 0.5853,
+    "Accuracy": 0.9077,
+    "BalancedAccuracy": 0.7068,
+    "Specificity": 1.0,
+    "MCC": 0.6106,
+    "TP": 381,
+    "FP": 0,
+    "TN": 4928,
+    "FN": 540,
+    "PositiveRate": 0.0651,
+    "falls_detected": 10,
+    "falls": 12,
+    "adl_clean": 17,
+    "adl": 17,
+    "alarms_per_min": 0.0
+   },
+   "C(delta=0.30)": {
+    "Precision": 0.7078,
+    "Recall": 0.5103,
+    "F1": 0.5931,
+    "Accuracy": 0.8897,
+    "BalancedAccuracy": 0.7355,
+    "Specificity": 0.9606,
+    "MCC": 0.5407,
+    "TP": 470,
+    "FP": 194,
+    "TN": 4734,
+    "FN": 451,
+    "PositiveRate": 0.1135,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 13,
+    "adl": 17,
+    "alarms_per_min": 2.5623
+   },
+   "C(delta=0.40)": {
+    "Precision": 0.7843,
+    "Recall": 0.4777,
+    "F1": 0.5938,
+    "Accuracy": 0.8971,
+    "BalancedAccuracy": 0.7266,
+    "Specificity": 0.9754,
+    "MCC": 0.5606,
+    "TP": 440,
+    "FP": 121,
+    "TN": 4807,
+    "FN": 481,
+    "PositiveRate": 0.0959,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 13,
+    "adl": 17,
+    "alarms_per_min": 3.4164
+   },
+   "C(delta=0.50)": {
+    "Precision": 0.849,
+    "Recall": 0.4028,
+    "F1": 0.5464,
+    "Accuracy": 0.8947,
+    "BalancedAccuracy": 0.6947,
+    "Specificity": 0.9866,
+    "MCC": 0.5395,
+    "TP": 371,
+    "FP": 66,
+    "TN": 4862,
+    "FN": 550,
+    "PositiveRate": 0.0747,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 14,
+    "adl": 17,
+    "alarms_per_min": 1.2811
+   },
+   "D(delta=0.30)": {
+    "Precision": 0.6133,
+    "Recall": 0.62,
+    "F1": 0.6166,
+    "Accuracy": 0.8786,
+    "BalancedAccuracy": 0.7735,
+    "Specificity": 0.9269,
+    "MCC": 0.5445,
+    "TP": 571,
+    "FP": 360,
+    "TN": 4568,
+    "FN": 350,
+    "PositiveRate": 0.1592,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 13,
+    "adl": 17,
+    "alarms_per_min": 2.1352
+   },
+   "D(delta=0.40)": {
+    "Precision": 0.614,
+    "Recall": 0.5907,
+    "F1": 0.6021,
+    "Accuracy": 0.8771,
+    "BalancedAccuracy": 0.7606,
+    "Specificity": 0.9306,
+    "MCC": 0.5296,
+    "TP": 544,
+    "FP": 342,
+    "TN": 4586,
+    "FN": 377,
+    "PositiveRate": 0.1515,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 13,
+    "adl": 17,
+    "alarms_per_min": 2.1352
+   },
+   "D(delta=0.50)": {
+    "Precision": 0.7097,
+    "Recall": 0.5309,
+    "F1": 0.6075,
+    "Accuracy": 0.8919,
+    "BalancedAccuracy": 0.7452,
+    "Specificity": 0.9594,
+    "MCC": 0.554,
+    "TP": 489,
+    "FP": 200,
+    "TN": 4728,
+    "FN": 432,
+    "PositiveRate": 0.1178,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 14,
+    "adl": 17,
+    "alarms_per_min": 1.2811
+   }
+  },
+  "1": {
+   "A": {
+    "Precision": 0.823,
+    "Recall": 0.2846,
+    "F1": 0.4229,
+    "Accuracy": 0.8875,
+    "BalancedAccuracy": 0.6371,
+    "Specificity": 0.9896,
+    "MCC": 0.4424,
+    "TP": 251,
+    "FP": 54,
+    "TN": 5151,
+    "FN": 631,
+    "PositiveRate": 0.0501,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 17,
+    "adl": 23,
+    "alarms_per_min": 2.6661
+   },
+   "P": {
+    "Precision": 1.0,
+    "Recall": 0.0136,
+    "F1": 0.0268,
+    "Accuracy": 0.8571,
+    "BalancedAccuracy": 0.5068,
+    "Specificity": 1.0,
+    "MCC": 0.108,
+    "TP": 12,
+    "FP": 0,
+    "TN": 5205,
+    "FN": 870,
+    "PositiveRate": 0.002,
+    "falls_detected": 3,
+    "falls": 18,
+    "adl_clean": 23,
+    "adl": 23,
+    "alarms_per_min": 0.0
+   },
+   "B": {
+    "Precision": 0.4411,
+    "Recall": 0.3651,
+    "F1": 0.3995,
+    "Accuracy": 0.841,
+    "BalancedAccuracy": 0.6433,
+    "Specificity": 0.9216,
+    "MCC": 0.3106,
+    "TP": 322,
+    "FP": 408,
+    "TN": 4797,
+    "FN": 560,
+    "PositiveRate": 0.1199,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 10,
+    "adl": 23,
+    "alarms_per_min": 5.3322
+   },
+   "C(delta=0.30)": {
+    "Precision": 0.6308,
+    "Recall": 0.3526,
+    "F1": 0.4524,
+    "Accuracy": 0.8763,
+    "BalancedAccuracy": 0.6588,
+    "Specificity": 0.965,
+    "MCC": 0.4098,
+    "TP": 311,
+    "FP": 182,
+    "TN": 5023,
+    "FN": 571,
+    "PositiveRate": 0.081,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 12,
+    "adl": 23,
+    "alarms_per_min": 4.1896
+   },
+   "C(delta=0.40)": {
+    "Precision": 0.6659,
+    "Recall": 0.3503,
+    "F1": 0.4591,
+    "Accuracy": 0.8804,
+    "BalancedAccuracy": 0.6603,
+    "Specificity": 0.9702,
+    "MCC": 0.4252,
+    "TP": 309,
+    "FP": 155,
+    "TN": 5050,
+    "FN": 573,
+    "PositiveRate": 0.0762,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 13,
+    "adl": 23,
+    "alarms_per_min": 3.8087
+   },
+   "C(delta=0.50)": {
+    "Precision": 0.675,
+    "Recall": 0.3367,
+    "F1": 0.4493,
+    "Accuracy": 0.8804,
+    "BalancedAccuracy": 0.6546,
+    "Specificity": 0.9725,
+    "MCC": 0.4204,
+    "TP": 297,
+    "FP": 143,
+    "TN": 5062,
+    "FN": 585,
+    "PositiveRate": 0.0723,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 14,
+    "adl": 23,
+    "alarms_per_min": 3.4278
+   },
+   "D(delta=0.30)": {
+    "Precision": 0.4892,
+    "Recall": 0.3594,
+    "F1": 0.4144,
+    "Accuracy": 0.8528,
+    "BalancedAccuracy": 0.6479,
+    "Specificity": 0.9364,
+    "MCC": 0.3376,
+    "TP": 317,
+    "FP": 331,
+    "TN": 4874,
+    "FN": 565,
+    "PositiveRate": 0.1065,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 12,
+    "adl": 23,
+    "alarms_per_min": 4.1896
+   },
+   "D(delta=0.40)": {
+    "Precision": 0.5571,
+    "Recall": 0.3594,
+    "F1": 0.4369,
+    "Accuracy": 0.8658,
+    "BalancedAccuracy": 0.6555,
+    "Specificity": 0.9516,
+    "MCC": 0.3761,
+    "TP": 317,
+    "FP": 252,
+    "TN": 4953,
+    "FN": 565,
+    "PositiveRate": 0.0935,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 13,
+    "adl": 23,
+    "alarms_per_min": 3.8087
+   },
+   "D(delta=0.50)": {
+    "Precision": 0.6279,
+    "Recall": 0.3424,
+    "F1": 0.4431,
+    "Accuracy": 0.8753,
+    "BalancedAccuracy": 0.654,
+    "Specificity": 0.9656,
+    "MCC": 0.4019,
+    "TP": 302,
+    "FP": 179,
+    "TN": 5026,
+    "FN": 580,
+    "PositiveRate": 0.079,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 14,
+    "adl": 23,
+    "alarms_per_min": 3.4278
+   }
+  }
+ },
+ "choice": {
+  "0": {
+   "chosen": "D(delta=0.30)",
+   "recall_floor": 0.2326,
+   "A_inner": {
+    "Precision": 0.5667,
+    "Recall": 0.2584,
+    "F1": 0.355,
+    "Accuracy": 0.8521,
+    "BalancedAccuracy": 0.6107,
+    "Specificity": 0.9631,
+    "MCC": 0.3125,
+    "TP": 238,
+    "FP": 182,
+    "TN": 4746,
+    "FN": 683,
+    "PositiveRate": 0.0718,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 2,
+    "adl": 17,
+    "alarms_per_min": 9.8221
+   },
+   "chosen_inner": {
+    "Precision": 0.6133,
+    "Recall": 0.62,
+    "F1": 0.6166,
+    "Accuracy": 0.8786,
+    "BalancedAccuracy": 0.7735,
+    "Specificity": 0.9269,
+    "MCC": 0.5445,
+    "TP": 571,
+    "FP": 360,
+    "TN": 4568,
+    "FN": 350,
+    "PositiveRate": 0.1592,
+    "falls_detected": 12,
+    "falls": 12,
+    "adl_clean": 13,
+    "adl": 17,
+    "alarms_per_min": 2.1352
+   }
+  },
+  "1": {
+   "chosen": "C(delta=0.40)",
+   "recall_floor": 0.2561,
+   "A_inner": {
+    "Precision": 0.823,
+    "Recall": 0.2846,
+    "F1": 0.4229,
+    "Accuracy": 0.8875,
+    "BalancedAccuracy": 0.6371,
+    "Specificity": 0.9896,
+    "MCC": 0.4424,
+    "TP": 251,
+    "FP": 54,
+    "TN": 5151,
+    "FN": 631,
+    "PositiveRate": 0.0501,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 17,
+    "adl": 23,
+    "alarms_per_min": 2.6661
+   },
+   "chosen_inner": {
+    "Precision": 0.6659,
+    "Recall": 0.3503,
+    "F1": 0.4591,
+    "Accuracy": 0.8804,
+    "BalancedAccuracy": 0.6603,
+    "Specificity": 0.9702,
+    "MCC": 0.4252,
+    "TP": 309,
+    "FP": 155,
+    "TN": 5050,
+    "FN": 573,
+    "PositiveRate": 0.0762,
+    "falls_detected": 18,
+    "falls": 18,
+    "adl_clean": 13,
+    "adl": 23,
+    "alarms_per_min": 3.8087
+   }
+  }
+ },
+ "test": {
+  "A": {
+   "Precision": 0.736,
+   "Recall": 0.2551,
+   "F1": 0.3789,
+   "Accuracy": 0.8737,
+   "BalancedAccuracy": 0.6194,
+   "Specificity": 0.9837,
+   "MCC": 0.384,
+   "TP": 460,
+   "FP": 165,
+   "TN": 9968,
+   "FN": 1343,
+   "PositiveRate": 0.0524,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 20,
+   "adl": 40,
+   "alarms_per_min": 4.8317
+  },
+  "P": {
+   "Precision": 0.2656,
+   "Recall": 0.0094,
+   "F1": 0.0182,
+   "Accuracy": 0.8464,
+   "BalancedAccuracy": 0.5024,
+   "Specificity": 0.9954,
+   "MCC": 0.0235,
+   "TP": 17,
+   "FP": 47,
+   "TN": 10086,
+   "FN": 1786,
+   "PositiveRate": 0.0054,
+   "falls_detected": 4,
+   "falls": 30,
+   "adl_clean": 38,
+   "adl": 40,
+   "alarms_per_min": 1.0066
+  },
+  "B": {
+   "Precision": 0.632,
+   "Recall": 0.4276,
+   "F1": 0.5101,
+   "Accuracy": 0.8759,
+   "BalancedAccuracy": 0.6917,
+   "Specificity": 0.9557,
+   "MCC": 0.4531,
+   "TP": 771,
+   "FP": 449,
+   "TN": 9684,
+   "FN": 1032,
+   "PositiveRate": 0.1022,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 21,
+   "adl": 40,
+   "alarms_per_min": 4.429
+  },
+  "C(delta=0.30)": {
+   "Precision": 0.7087,
+   "Recall": 0.3927,
+   "F1": 0.5054,
+   "Accuracy": 0.8839,
+   "BalancedAccuracy": 0.682,
+   "Specificity": 0.9713,
+   "MCC": 0.4706,
+   "TP": 708,
+   "FP": 291,
+   "TN": 9842,
+   "FN": 1095,
+   "PositiveRate": 0.0837,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 26,
+   "adl": 40,
+   "alarms_per_min": 3.0198
+  },
+  "C(delta=0.40)": {
+   "Precision": 0.7084,
+   "Recall": 0.3799,
+   "F1": 0.4946,
+   "Accuracy": 0.8827,
+   "BalancedAccuracy": 0.676,
+   "Specificity": 0.9722,
+   "MCC": 0.4621,
+   "TP": 685,
+   "FP": 282,
+   "TN": 9851,
+   "FN": 1118,
+   "PositiveRate": 0.081,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 26,
+   "adl": 40,
+   "alarms_per_min": 3.4224
+  },
+  "C(delta=0.50)": {
+   "Precision": 0.7173,
+   "Recall": 0.3561,
+   "F1": 0.4759,
+   "Accuracy": 0.8815,
+   "BalancedAccuracy": 0.6656,
+   "Specificity": 0.975,
+   "MCC": 0.4502,
+   "TP": 642,
+   "FP": 253,
+   "TN": 9880,
+   "FN": 1161,
+   "PositiveRate": 0.075,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 27,
+   "adl": 40,
+   "alarms_per_min": 3.0198
+  },
+  "D(delta=0.30)": {
+   "Precision": 0.737,
+   "Recall": 0.4725,
+   "F1": 0.5759,
+   "Accuracy": 0.8949,
+   "BalancedAccuracy": 0.7213,
+   "Specificity": 0.97,
+   "MCC": 0.5358,
+   "TP": 852,
+   "FP": 304,
+   "TN": 9829,
+   "FN": 951,
+   "PositiveRate": 0.0968,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 28,
+   "adl": 40,
+   "alarms_per_min": 2.6172
+  },
+  "D(delta=0.40)": {
+   "Precision": 0.745,
+   "Recall": 0.4714,
+   "F1": 0.5774,
+   "Accuracy": 0.8958,
+   "BalancedAccuracy": 0.7214,
+   "Specificity": 0.9713,
+   "MCC": 0.5392,
+   "TP": 850,
+   "FP": 291,
+   "TN": 9842,
+   "FN": 953,
+   "PositiveRate": 0.0956,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 28,
+   "adl": 40,
+   "alarms_per_min": 2.6172
+  },
+  "D(delta=0.50)": {
+   "Precision": 0.7743,
+   "Recall": 0.4548,
+   "F1": 0.573,
+   "Accuracy": 0.8976,
+   "BalancedAccuracy": 0.7156,
+   "Specificity": 0.9764,
+   "MCC": 0.5431,
+   "TP": 820,
+   "FP": 239,
+   "TN": 9894,
+   "FN": 983,
+   "PositiveRate": 0.0887,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 29,
+   "adl": 40,
+   "alarms_per_min": 2.4158
+  },
+  "E (selected)": {
+   "Precision": 0.7958,
+   "Recall": 0.3955,
+   "F1": 0.5283,
+   "Accuracy": 0.8933,
+   "BalancedAccuracy": 0.6887,
+   "Specificity": 0.9819,
+   "MCC": 0.5129,
+   "TP": 713,
+   "FP": 183,
+   "TN": 9950,
+   "FN": 1090,
+   "PositiveRate": 0.0751,
+   "falls_detected": 30,
+   "falls": 30,
+   "adl_clean": 28,
+   "adl": 40,
+   "alarms_per_min": 2.6172
+  }
+ },
+ "per_fold_test": {
+  "0|A": {
+   "Precision": 0.7163,
+   "Recall": 0.3492,
+   "F1": 0.4695,
+   "Accuracy": 0.8857,
+   "BalancedAccuracy": 0.6629,
+   "Specificity": 0.9766,
+   "MCC": 0.4475,
+   "TP": 308,
+   "FP": 122,
+   "TN": 5083,
+   "FN": 574,
+   "PositiveRate": 0.0706,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 7,
+   "adl": 23,
+   "alarms_per_min": 7.2366
+  },
+  "1|A": {
+   "Precision": 0.7795,
+   "Recall": 0.165,
+   "F1": 0.2724,
+   "Accuracy": 0.8612,
+   "BalancedAccuracy": 0.5782,
+   "Specificity": 0.9913,
+   "MCC": 0.3171,
+   "TP": 152,
+   "FP": 43,
+   "TN": 4885,
+   "FN": 769,
+   "PositiveRate": 0.0333,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 13,
+   "adl": 17,
+   "alarms_per_min": 2.1352
+  },
+  "0|P": {
+   "Precision": 1.0,
+   "Recall": 0.0136,
+   "F1": 0.0268,
+   "Accuracy": 0.8571,
+   "BalancedAccuracy": 0.5068,
+   "Specificity": 1.0,
+   "MCC": 0.108,
+   "TP": 12,
+   "FP": 0,
+   "TN": 5205,
+   "FN": 870,
+   "PositiveRate": 0.002,
+   "falls_detected": 3,
+   "falls": 18,
+   "adl_clean": 23,
+   "adl": 23,
+   "alarms_per_min": 0.0
+  },
+  "1|P": {
+   "Precision": 0.0962,
+   "Recall": 0.0054,
+   "F1": 0.0103,
+   "Accuracy": 0.8354,
+   "BalancedAccuracy": 0.4979,
+   "Specificity": 0.9905,
+   "MCC": -0.0159,
+   "TP": 5,
+   "FP": 47,
+   "TN": 4881,
+   "FN": 916,
+   "PositiveRate": 0.0089,
+   "falls_detected": 1,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 2.1352
+  },
+  "0|B": {
+   "Precision": 0.5351,
+   "Recall": 0.4932,
+   "F1": 0.5133,
+   "Accuracy": 0.8645,
+   "BalancedAccuracy": 0.7103,
+   "Specificity": 0.9274,
+   "MCC": 0.4352,
+   "TP": 435,
+   "FP": 378,
+   "TN": 4827,
+   "FN": 447,
+   "PositiveRate": 0.1336,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 7,
+   "adl": 23,
+   "alarms_per_min": 7.2366
+  },
+  "1|B": {
+   "Precision": 0.8256,
+   "Recall": 0.3648,
+   "F1": 0.506,
+   "Accuracy": 0.8878,
+   "BalancedAccuracy": 0.6752,
+   "Specificity": 0.9856,
+   "MCC": 0.5016,
+   "TP": 336,
+   "FP": 71,
+   "TN": 4857,
+   "FN": 585,
+   "PositiveRate": 0.0696,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 14,
+   "adl": 17,
+   "alarms_per_min": 1.2811
+  },
+  "0|C(delta=0.30)": {
+   "Precision": 0.6167,
+   "Recall": 0.4433,
+   "F1": 0.5158,
+   "Accuracy": 0.8794,
+   "BalancedAccuracy": 0.6983,
+   "Specificity": 0.9533,
+   "MCC": 0.457,
+   "TP": 391,
+   "FP": 243,
+   "TN": 4962,
+   "FN": 491,
+   "PositiveRate": 0.1042,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 11,
+   "adl": 23,
+   "alarms_per_min": 4.9513
+  },
+  "1|C(delta=0.30)": {
+   "Precision": 0.8685,
+   "Recall": 0.3442,
+   "F1": 0.493,
+   "Accuracy": 0.8885,
+   "BalancedAccuracy": 0.6672,
+   "Specificity": 0.9903,
+   "MCC": 0.5036,
+   "TP": 317,
+   "FP": 48,
+   "TN": 4880,
+   "FN": 604,
+   "PositiveRate": 0.0624,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 0.8541
+  },
+  "0|C(delta=0.40)": {
+   "Precision": 0.6019,
+   "Recall": 0.432,
+   "F1": 0.503,
+   "Accuracy": 0.8763,
+   "BalancedAccuracy": 0.6918,
+   "Specificity": 0.9516,
+   "MCC": 0.4423,
+   "TP": 381,
+   "FP": 252,
+   "TN": 4953,
+   "FN": 501,
+   "PositiveRate": 0.104,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 11,
+   "adl": 23,
+   "alarms_per_min": 5.7131
+  },
+  "1|C(delta=0.40)": {
+   "Precision": 0.9102,
+   "Recall": 0.3301,
+   "F1": 0.4845,
+   "Accuracy": 0.8894,
+   "BalancedAccuracy": 0.662,
+   "Specificity": 0.9939,
+   "MCC": 0.5086,
+   "TP": 304,
+   "FP": 30,
+   "TN": 4898,
+   "FN": 617,
+   "PositiveRate": 0.0571,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 0.8541
+  },
+  "0|C(delta=0.50)": {
+   "Precision": 0.6097,
+   "Recall": 0.4002,
+   "F1": 0.4832,
+   "Accuracy": 0.876,
+   "BalancedAccuracy": 0.6784,
+   "Specificity": 0.9566,
+   "MCC": 0.4281,
+   "TP": 353,
+   "FP": 226,
+   "TN": 4979,
+   "FN": 529,
+   "PositiveRate": 0.0951,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 11,
+   "adl": 23,
+   "alarms_per_min": 5.3322
+  },
+  "1|C(delta=0.50)": {
+   "Precision": 0.9146,
+   "Recall": 0.3138,
+   "F1": 0.4673,
+   "Accuracy": 0.8873,
+   "BalancedAccuracy": 0.6542,
+   "Specificity": 0.9945,
+   "MCC": 0.4967,
+   "TP": 289,
+   "FP": 27,
+   "TN": 4901,
+   "FN": 632,
+   "PositiveRate": 0.054,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 16,
+   "adl": 17,
+   "alarms_per_min": 0.427
+  },
+  "0|D(delta=0.30)": {
+   "Precision": 0.7278,
+   "Recall": 0.4637,
+   "F1": 0.5665,
+   "Accuracy": 0.8972,
+   "BalancedAccuracy": 0.7172,
+   "Specificity": 0.9706,
+   "MCC": 0.5281,
+   "TP": 409,
+   "FP": 153,
+   "TN": 5052,
+   "FN": 473,
+   "PositiveRate": 0.0923,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 13,
+   "adl": 23,
+   "alarms_per_min": 4.1896
+  },
+  "1|D(delta=0.30)": {
+   "Precision": 0.7458,
+   "Recall": 0.481,
+   "F1": 0.5848,
+   "Accuracy": 0.8925,
+   "BalancedAccuracy": 0.7252,
+   "Specificity": 0.9694,
+   "MCC": 0.5431,
+   "TP": 443,
+   "FP": 151,
+   "TN": 4777,
+   "FN": 478,
+   "PositiveRate": 0.1016,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 0.8541
+  },
+  "0|D(delta=0.40)": {
+   "Precision": 0.7268,
+   "Recall": 0.4615,
+   "F1": 0.5645,
+   "Accuracy": 0.8968,
+   "BalancedAccuracy": 0.716,
+   "Specificity": 0.9706,
+   "MCC": 0.5262,
+   "TP": 407,
+   "FP": 153,
+   "TN": 5052,
+   "FN": 475,
+   "PositiveRate": 0.092,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 13,
+   "adl": 23,
+   "alarms_per_min": 4.1896
+  },
+  "1|D(delta=0.40)": {
+   "Precision": 0.7625,
+   "Recall": 0.481,
+   "F1": 0.5899,
+   "Accuracy": 0.8947,
+   "BalancedAccuracy": 0.7265,
+   "Specificity": 0.972,
+   "MCC": 0.5516,
+   "TP": 443,
+   "FP": 138,
+   "TN": 4790,
+   "FN": 478,
+   "PositiveRate": 0.0993,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 0.8541
+  },
+  "0|D(delta=0.50)": {
+   "Precision": 0.7113,
+   "Recall": 0.4274,
+   "F1": 0.534,
+   "Accuracy": 0.8919,
+   "BalancedAccuracy": 0.699,
+   "Specificity": 0.9706,
+   "MCC": 0.497,
+   "TP": 377,
+   "FP": 153,
+   "TN": 5052,
+   "FN": 505,
+   "PositiveRate": 0.0871,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 13,
+   "adl": 23,
+   "alarms_per_min": 4.1896
+  },
+  "1|D(delta=0.50)": {
+   "Precision": 0.8374,
+   "Recall": 0.481,
+   "F1": 0.611,
+   "Accuracy": 0.9036,
+   "BalancedAccuracy": 0.7318,
+   "Specificity": 0.9825,
+   "MCC": 0.5887,
+   "TP": 443,
+   "FP": 86,
+   "TN": 4842,
+   "FN": 478,
+   "PositiveRate": 0.0904,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 16,
+   "adl": 17,
+   "alarms_per_min": 0.427
+  },
+  "0|E (selected)": {
+   "Precision": 0.7278,
+   "Recall": 0.4637,
+   "F1": 0.5665,
+   "Accuracy": 0.8972,
+   "BalancedAccuracy": 0.7172,
+   "Specificity": 0.9706,
+   "MCC": 0.5281,
+   "TP": 409,
+   "FP": 153,
+   "TN": 5052,
+   "FN": 473,
+   "PositiveRate": 0.0923,
+   "falls_detected": 18,
+   "falls": 18,
+   "adl_clean": 13,
+   "adl": 23,
+   "alarms_per_min": 4.1896
+  },
+  "1|E (selected)": {
+   "Precision": 0.9102,
+   "Recall": 0.3301,
+   "F1": 0.4845,
+   "Accuracy": 0.8894,
+   "BalancedAccuracy": 0.662,
+   "Specificity": 0.9939,
+   "MCC": 0.5086,
+   "TP": 304,
+   "FP": 30,
+   "TN": 4898,
+   "FN": 617,
+   "PositiveRate": 0.0571,
+   "falls_detected": 12,
+   "falls": 12,
+   "adl_clean": 15,
+   "adl": 17,
+   "alarms_per_min": 0.8541
+  }
+ },
+ "inner_per_fold": {
+  "0|A": [
+   {
+    "Precision": 0.6028,
+    "Recall": 0.2945,
+    "F1": 0.3957
+   },
+   {
+    "Precision": 0.5291,
+    "Recall": 0.2257,
+    "F1": 0.3164
+   }
+  ],
+  "0|P": [
+   {
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0
+   },
+   {
+    "Precision": 0.0962,
+    "Recall": 0.0104,
+    "F1": 0.0187
+   }
+  ],
+  "0|B": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.5251,
+    "F1": 0.6886
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3126,
+    "F1": 0.4763
+   }
+  ],
+  "0|C(delta=0.30)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.4772,
+    "F1": 0.6461
+   },
+   {
+    "Precision": 0.5736,
+    "Recall": 0.5404,
+    "F1": 0.5565
+   }
+  ],
+  "0|C(delta=0.40)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.5137,
+    "F1": 0.6787
+   },
+   {
+    "Precision": 0.6399,
+    "Recall": 0.4451,
+    "F1": 0.525
+   }
+  ],
+  "0|C(delta=0.50)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.4498,
+    "F1": 0.6205
+   },
+   {
+    "Precision": 0.725,
+    "Recall": 0.3602,
+    "F1": 0.4813
+   }
+  ],
+  "0|D(delta=0.30)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.5799,
+    "F1": 0.7341
+   },
+   {
+    "Precision": 0.4682,
+    "Recall": 0.6563,
+    "F1": 0.5466
+   }
+  ],
+  "0|D(delta=0.40)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.5799,
+    "F1": 0.7341
+   },
+   {
+    "Precision": 0.4589,
+    "Recall": 0.6004,
+    "F1": 0.5202
+   }
+  ],
+  "0|D(delta=0.50)": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.5114,
+    "F1": 0.6767
+   },
+   {
+    "Precision": 0.5699,
+    "Recall": 0.5487,
+    "F1": 0.5591
+   }
+  ],
+  "1|A": [
+   {
+    "Precision": 0.8941,
+    "Recall": 0.2612,
+    "F1": 0.4043
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.2492,
+    "F1": 0.399
+   },
+   {
+    "Precision": 0.6763,
+    "Recall": 0.3534,
+    "F1": 0.4642
+   }
+  ],
+  "1|P": [
+   {
+    "Precision": 1.0,
+    "Recall": 0.0103,
+    "F1": 0.0204
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.0154,
+    "F1": 0.0303
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.015,
+    "F1": 0.0296
+   }
+  ],
+  "1|B": [
+   {
+    "Precision": 0.4981,
+    "Recall": 0.4467,
+    "F1": 0.471
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3415,
+    "F1": 0.5092
+   },
+   {
+    "Precision": 0.2263,
+    "Recall": 0.3045,
+    "F1": 0.2596
+   }
+  ],
+  "1|C(delta=0.30)": [
+   {
+    "Precision": 0.4883,
+    "Recall": 0.4296,
+    "F1": 0.457
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3231,
+    "F1": 0.4884
+   },
+   {
+    "Precision": 0.6136,
+    "Recall": 0.3045,
+    "F1": 0.407
+   }
+  ],
+  "1|C(delta=0.40)": [
+   {
+    "Precision": 0.4863,
+    "Recall": 0.4261,
+    "F1": 0.4542
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.32,
+    "F1": 0.4848
+   },
+   {
+    "Precision": 0.7714,
+    "Recall": 0.3045,
+    "F1": 0.4367
+   }
+  ],
+  "1|C(delta=0.50)": [
+   {
+    "Precision": 0.4675,
+    "Recall": 0.3952,
+    "F1": 0.4283
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3108,
+    "F1": 0.4742
+   },
+   {
+    "Precision": 0.871,
+    "Recall": 0.3045,
+    "F1": 0.4513
+   }
+  ],
+  "1|D(delta=0.30)": [
+   {
+    "Precision": 0.4981,
+    "Recall": 0.4467,
+    "F1": 0.471
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3262,
+    "F1": 0.4919
+   },
+   {
+    "Precision": 0.2883,
+    "Recall": 0.3045,
+    "F1": 0.2962
+   }
+  ],
+  "1|D(delta=0.40)": [
+   {
+    "Precision": 0.4981,
+    "Recall": 0.4467,
+    "F1": 0.471
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3262,
+    "F1": 0.4919
+   },
+   {
+    "Precision": 0.401,
+    "Recall": 0.3045,
+    "F1": 0.3462
+   }
+  ],
+  "1|D(delta=0.50)": [
+   {
+    "Precision": 0.4675,
+    "Recall": 0.3952,
+    "F1": 0.4283
+   },
+   {
+    "Precision": 1.0,
+    "Recall": 0.3262,
+    "F1": 0.4919
+   },
+   {
+    "Precision": 0.6279,
+    "Recall": 0.3045,
+    "F1": 0.4101
+   }
+  ]
+ },
+ "configs": {
+  "0": {
+   "inner_folds": [
+    [
+     "A5",
+     "fall-03",
+     "fall-05",
+     "fall-07",
+     "fall-09",
+     "fall-11",
+     "fall-01"
+    ],
+    [
+     "A7",
+     "fall-02",
+     "fall-04",
+     "fall-06",
+     "fall-08",
+     "fall-12",
+     "fall-10"
+    ]
+   ]
+  },
+  "1": {
+   "inner_folds": [
+    [
+     "A4",
+     "fall-16",
+     "fall-22",
+     "fall-25",
+     "fall-28",
+     "fall-13",
+     "fall-19"
+    ],
+    [
+     "A6",
+     "fall-14",
+     "fall-17",
+     "fall-26",
+     "fall-29",
+     "fall-20",
+     "fall-23"
+    ],
+    [
+     "A8",
+     "fall-15",
+     "fall-18",
+     "fall-21",
+     "fall-24",
+     "fall-27",
+     "fall-30"
+    ]
+   ]
+  }
+ },
+ "final_models": {
+  "0": {
+   "variant": "D",
+   "tau_h": 0.6,
+   "tau_v": 0.8929,
+   "delta": 0.3,
+   "tau_s": 0.4453
+  },
+  "1": {
+   "variant": "C",
+   "tau_h": 0.4,
+   "tau_v": 0.7321,
+   "delta": 0.4,
+   "tau_s": 0.4359
+  }
+ },
+ "A_models": {
+  "0": {
+   "variant": "A",
+   "tau_h": 0.8,
+   "tau_v": 0.4107,
+   "delta": 0.0,
+   "tau_s": 0.4453
+  },
+  "1": {
+   "variant": "A",
+   "tau_h": 0.75,
+   "tau_v": 0.5714,
+   "delta": 0.0,
+   "tau_s": 0.4359
+  }
+ },
+ "coverage_test": {
+  "A": {
+   "low": {
+    "frames": 2197,
+    "fraction": 0.3609,
+    "fall_rate_when_true": 0.2699
+   },
+   "fast_now": {
+    "frames": 980,
+    "fraction": 0.161,
+    "fall_rate_when_true": 0.4582
+   },
+   "fast_recent": {
+    "frames": 2420,
+    "fraction": 0.3976,
+    "fall_rate_when_true": 0.2872
+   },
+   "dropped": {
+    "frames": 6087,
+    "fraction": 1.0,
+    "fall_rate_when_true": 0.1449
+   }
+  },
+  "D(delta=0.30)": {
+   "low": {
+    "frames": 1376,
+    "fraction": 0.2261,
+    "fall_rate_when_true": 0.3488
+   },
+   "fast_now": {
+    "frames": 372,
+    "fraction": 0.0611,
+    "fall_rate_when_true": 0.6532
+   },
+   "fast_recent": {
+    "frames": 1348,
+    "fraction": 0.2215,
+    "fall_rate_when_true": 0.4073
+   },
+   "dropped": {
+    "frames": 1833,
+    "fraction": 0.3011,
+    "fall_rate_when_true": 0.3115
+   }
+  }
+ },
+ "fp_analysis": {
+  "total": 236,
+  "by_kind": {
+   "ADL": 236
+  },
+  "by_height": {
+   "0.5-0.8": 138,
+   "0.3-0.5": 60,
+   "<0.3": 32,
+   ">=0.8": 6
+  },
+  "by_adl_urfd_code": {
+   "-1": 105,
+   "0": 66,
+   "1": 65
+  },
+  "with_drop_ge_0_4": 169,
+  "removed_by_chosen": 171,
+  "top_videos": {
+   "adl-38": 32,
+   "adl-30": 29,
+   "adl-10": 23,
+   "adl-33": 16,
+   "adl-39": 14,
+   "adl-40": 13,
+   "adl-31": 13,
+   "adl-01": 12
+  }
+ },
+ "pr_tradeoff_inner_cv": {
+  "A": [
+   {
+    "tau_h": 0.1,
+    "Precision": 0.2182,
+    "Recall": 0.0067,
+    "F1": 0.0129
+   },
+   {
+    "tau_h": 0.15,
+    "Precision": 0.2034,
+    "Recall": 0.0067,
+    "F1": 0.0129
+   },
+   {
+    "tau_h": 0.2,
+    "Precision": 0.2656,
+    "Recall": 0.0094,
+    "F1": 0.0182
+   },
+   {
+    "tau_h": 0.25,
+    "Precision": 0.4762,
+    "Recall": 0.0277,
+    "F1": 0.0524
+   },
+   {
+    "tau_h": 0.3,
+    "Precision": 0.6034,
+    "Recall": 0.0582,
+    "F1": 0.1062
+   },
+   {
+    "tau_h": 0.35,
+    "Precision": 0.6085,
+    "Recall": 0.0793,
+    "F1": 0.1403
+   },
+   {
+    "tau_h": 0.4,
+    "Precision": 0.6343,
+    "Recall": 0.127,
+    "F1": 0.2116
+   },
+   {
+    "tau_h": 0.45,
+    "Precision": 0.6295,
+    "Recall": 0.1564,
+    "F1": 0.2506
+   },
+   {
+    "tau_h": 0.5,
+    "Precision": 0.6255,
+    "Recall": 0.1852,
+    "F1": 0.2858
+   },
+   {
+    "tau_h": 0.55,
+    "Precision": 0.617,
+    "Recall": 0.2091,
+    "F1": 0.3123
+   },
+   {
+    "tau_h": 0.6,
+    "Precision": 0.6807,
+    "Recall": 0.2152,
+    "F1": 0.327
+   },
+   {
+    "tau_h": 0.65,
+    "Precision": 0.7745,
+    "Recall": 0.2324,
+    "F1": 0.3575
+   },
+   {
+    "tau_h": 0.7,
+    "Precision": 0.778,
+    "Recall": 0.2468,
+    "F1": 0.3747
+   },
+   {
+    "tau_h": 0.75,
+    "Precision": 0.7137,
+    "Recall": 0.2723,
+    "F1": 0.3942
+   },
+   {
+    "tau_h": 0.8,
+    "Precision": 0.6878,
+    "Recall": 0.2823,
+    "F1": 0.4003
+   }
+  ],
+  "chosen": [
+   {
+    "tau_h": 0.1,
+    "Precision": 0.6735,
+    "Recall": 0.0183,
+    "F1": 0.0356
+   },
+   {
+    "tau_h": 0.15,
+    "Precision": 0.8182,
+    "Recall": 0.0399,
+    "F1": 0.0762
+   },
+   {
+    "tau_h": 0.2,
+    "Precision": 0.3918,
+    "Recall": 0.0532,
+    "F1": 0.0938
+   },
+   {
+    "tau_h": 0.25,
+    "Precision": 0.537,
+    "Recall": 0.1448,
+    "F1": 0.228
+   },
+   {
+    "tau_h": 0.3,
+    "Precision": 0.6092,
+    "Recall": 0.2646,
+    "F1": 0.3689
+   },
+   {
+    "tau_h": 0.35,
+    "Precision": 0.6677,
+    "Recall": 0.3633,
+    "F1": 0.4705
+   },
+   {
+    "tau_h": 0.4,
+    "Precision": 0.6792,
+    "Recall": 0.4099,
+    "F1": 0.5112
+   },
+   {
+    "tau_h": 0.45,
+    "Precision": 0.6603,
+    "Recall": 0.4409,
+    "F1": 0.5288
+   },
+   {
+    "tau_h": 0.5,
+    "Precision": 0.6228,
+    "Recall": 0.4698,
+    "F1": 0.5356
+   },
+   {
+    "tau_h": 0.55,
+    "Precision": 0.6247,
+    "Recall": 0.5058,
+    "F1": 0.559
+   },
+   {
+    "tau_h": 0.6,
+    "Precision": 0.6206,
+    "Recall": 0.528,
+    "F1": 0.5706
+   },
+   {
+    "tau_h": 0.65,
+    "Precision": 0.8187,
+    "Recall": 0.4709,
+    "F1": 0.5979
+   },
+   {
+    "tau_h": 0.7,
+    "Precision": 0.789,
+    "Recall": 0.4792,
+    "F1": 0.5963
+   },
+   {
+    "tau_h": 0.75,
+    "Precision": 0.7431,
+    "Recall": 0.4637,
+    "F1": 0.571
+   },
+   {
+    "tau_h": 0.8,
+    "Precision": 0.7291,
+    "Recall": 0.4731,
+    "F1": 0.5738
+   }
+  ]
+ },
+ "stress_test": {
+  "A|none": {
+   "Precision": 0.736,
+   "Recall": 0.2551,
+   "F1": 0.3789,
+   "MCC": 0.384
+  },
+  "E (selected)|none": {
+   "Precision": 0.7958,
+   "Recall": 0.3955,
+   "F1": 0.5283,
+   "MCC": 0.5129
+  },
+  "A|noise 3 cm": {
+   "Precision": 0.744,
+   "Recall": 0.2402,
+   "F1": 0.3631,
+   "MCC": 0.3749
+  },
+  "E (selected)|noise 3 cm": {
+   "Precision": 0.6583,
+   "Recall": 0.4199,
+   "F1": 0.5127,
+   "MCC": 0.4625
+  },
+  "A|noise 6 cm": {
+   "Precision": 0.7113,
+   "Recall": 0.2446,
+   "F1": 0.364,
+   "MCC": 0.3662
+  },
+  "E (selected)|noise 6 cm": {
+   "Precision": 0.5233,
+   "Recall": 0.4232,
+   "F1": 0.468,
+   "MCC": 0.3878
+  },
+  "A|20% frames missing": {
+   "Precision": 0.7293,
+   "Recall": 0.2496,
+   "F1": 0.3719,
+   "MCC": 0.377
+  },
+  "E (selected)|20% frames missing": {
+   "Precision": 0.7666,
+   "Recall": 0.3971,
+   "F1": 0.5232,
+   "MCC": 0.5008
+  },
+  "A|height scale x0.9": {
+   "Precision": 0.6974,
+   "Recall": 0.2518,
+   "F1": 0.37,
+   "MCC": 0.3664
+  },
+  "E (selected)|height scale x0.9": {
+   "Precision": 0.7911,
+   "Recall": 0.376,
+   "F1": 0.5098,
+   "MCC": 0.4971
+  },
+  "A|height scale x1.1": {
+   "Precision": 0.7828,
+   "Recall": 0.2418,
+   "F1": 0.3695,
+   "MCC": 0.3903
+  },
+  "E (selected)|height scale x1.1": {
+   "Precision": 0.7296,
+   "Recall": 0.386,
+   "F1": 0.5049,
+   "MCC": 0.4761
+  },
+  "A|floor offset +5 cm": {
+   "Precision": 0.7824,
+   "Recall": 0.2374,
+   "F1": 0.3643,
+   "MCC": 0.3864
+  },
+  "E (selected)|floor offset +5 cm": {
+   "Precision": 0.804,
+   "Recall": 0.3572,
+   "F1": 0.4946,
+   "MCC": 0.489
+  },
+  "A|floor offset -5 cm": {
+   "Precision": 0.6867,
+   "Recall": 0.2723,
+   "F1": 0.39,
+   "MCC": 0.3776
+  },
+  "E (selected)|floor offset -5 cm": {
+   "Precision": 0.7642,
+   "Recall": 0.4171,
+   "F1": 0.5396,
+   "MCC": 0.5132
+  }
+ },
+ "complementarity_test": {
+  "A": {
+   "both_correct": 9448,
+   "neural_only": 984,
+   "symbolic_only": 980,
+   "both_wrong": 524,
+   "double_fault": 0.0439,
+   "error_correlation": 0.2538,
+   "fall_frames_neural_missed_symbolic_caught": 69,
+   "symbolic_false_alarm_frames_where_neural_correct": 153
+  },
+  "E (selected)": {
+   "both_correct": 9779,
+   "neural_only": 653,
+   "symbolic_only": 884,
+   "both_wrong": 620,
+   "double_fault": 0.0519,
+   "error_correlation": 0.3759,
+   "fall_frames_neural_missed_symbolic_caught": 107,
+   "symbolic_false_alarm_frames_where_neural_correct": 37
+  }
+ }
+}
