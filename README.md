@@ -18,6 +18,8 @@ compared one to one with the paper's Table 4.
 
 Earlier versions (the original V3, v2, v4, the fusion experiments, V3-norm, the audits and diagnostics) are only in the git history.
 
+**Dashboard:** open `dashboard/dashboard.html` in a browser (see `dashboard/README.md`).
+
 Check what this checkout can run with `python preflight.py`, and the split integrity with `data_audit.py` (`reports/data_integrity_audit.json`).
 
 ## Repository layout
@@ -33,6 +35,7 @@ URFD/                          NOT in git: raw dataset (see URFD/README.md); the
 processed_data/                preprocessed skeletons and metric Kinect neck heights for all 70 videos
 splits/                        the saved splits (split_scene_v2.json, split_video_v2.json)
 reports/                       results of the active models
+dashboard/                     offline results dashboard (dashboard.html) and its template
 ```
 
 ## Setup
