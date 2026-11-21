@@ -14,10 +14,9 @@ compared one to one with the paper's Table 4.
 |---|---|
 | Neural stream: ensemble of 3 neck-centred ST-GCN seeds (`neural_ensemble.py`, `scripts/train_ensemble.sh`) | URFD out-of-fold: MCC 0.547, F1 0.619, precision 0.570. GMDCSA-24 (160 unseen videos, all 6 models): MCC 0.530, precision 0.829; `reports/external_gmdcsa24/external_test.md`. The ensemble was chosen after both test sets had been seen, so these numbers are post-hoc |
 | Symbolic stream: improved V3 (`symbolic_v3_improved.py`, `evaluate_symbolic_v3.py`) | Neck height in metres from the Kinect, V3 rules with a 1 s descent window, a minimum drop and V3's latch, chosen per fold by inner group CV on train+val. URFD test: precision 0.796, recall 0.396, F1 0.528, MCC 0.513, 30/30 falls, 28/40 ADL videos without alarm; `reports/symbolic_v3_precision/` |
-| **Neuro-symbolic fusion** (`fusion_neurosymbolic.py`, applied with `fusion.py --rule neurosymbolic`) | Neural alarm vetoed while the metric neck height says the person is upright, OR the V3 alarm with weak neural support. Thresholds chosen per fold on train+val without test labels. URFD test (post-hoc): MCC 0.650, F1 0.703, accuracy 0.909, recall 0.711, precision 0.695, 30/30 falls; +0.10 MCC over the neural ensemble (bootstrap 95% CI +0.02 to +0.18); `reports/fusion_neurosymbolic/report.md` |
 | External test of the improved V3 on FUKinect-Fall (21 new people, Kinect v1, no refitting) | fold 0 config: 132/167 falls, 18% of ADL clips with an alarm; fold 1 config: 17/167 falls. Neither passed the pre-registered rule; `reports/symbolic_v3_external_fukinect/report.md` |
 
-Earlier versions (the original V3, v2, v4, the earlier fusion experiments, V3-norm, the audits and diagnostics) are only in the git history.
+Earlier versions (the original V3, v2, v4, the fusion experiments, V3-norm, the audits and diagnostics) are only in the git history.
 
 Check what this checkout can run with `python preflight.py`, and the split integrity with `data_audit.py` (`reports/data_integrity_audit.json`).
 
@@ -74,7 +73,7 @@ These come from the audits and keep the results honest:
 - **New experiment, new folder.** `train.py` refuses to resume or overwrite a run made with different settings.
 - **Run the tests first.** `tests_pretraining.py` (18 tests) runs automatically before training, and training does
   not start if any test fails. `tests_symbolic_v3_improved.py` checks the symbolic stream and
-  `python -m unittest tests_fusion_audit.py` the fusion, the export and the split audit.
+  `python -m unittest tests_data_audit.py` the split audit.
 - Report event-level results (falls detected, ADL videos with false alarms) with confidence intervals over videos,
   not only frame-level accuracy.
 

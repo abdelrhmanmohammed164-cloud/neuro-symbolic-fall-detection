@@ -4,7 +4,7 @@ The final neural stream: the average fall probability of the neck-centred ST-GCN
 
 Decision: the ensemble was better than the single models on both test sets (URFD test, 3 seeds per
 fold: MCC 0.547 vs 0.503; GMDCSA-24, 6 models: 0.530 vs 0.505), so it is the neural stream used from now
-on (for example in the fusion with the symbolic stream).
+on.
 
 Modes
   all : the 6 models (3 seeds x 2 folds), for data that is not URFD (as in the GMDCSA-24 external test).

@@ -46,19 +46,11 @@ python plot_symbolic_v3.py
 python tests_symbolic_v3_improved.py
 ```
 
-## Fusion
+## Checks
 
 | File | What it does |
 |---|---|
-| `fusion_neurosymbolic.py` | The fusion study: thresholds per fold on train+val (out-of-fold neural, inner-CV V3), one score on test, bootstrap; `reports/fusion_neurosymbolic/` |
-| `export_symbolic_predictions.py` | V3 alarms per frame on the URFD test folds, aligned with the neural CSV |
-| `fusion.py` | Applies a frozen rule (`neurosymbolic`, `or`, `and`) to prediction CSVs; refuses unaligned or missing frames |
-| `data_audit.py` | Split integrity: test isolation, duplicate arrays, train/val scene overlap, cross-fold overlap |
-| `tests_fusion_audit.py` | 21 tests for the four files above (one reproduces V3's test counts from the exported CSV) |
-
-```bash
-python fusion_neurosymbolic.py
-python -m unittest tests_fusion_audit.py
-```
+| `data_audit.py` | Split integrity: test isolation, duplicate arrays, train/val scene overlap, cross-fold overlap; `reports/data_integrity_audit.json` |
+| `tests_data_audit.py` | Tests for `data_audit.py` |
 
 `PROJECT_ROOT` overrides the project root for all scripts.
