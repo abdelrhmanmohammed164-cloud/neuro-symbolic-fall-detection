@@ -14,3 +14,15 @@ fingerprint of the preprocessing configuration). Per sequence:
 | `<seq>_meta.json` | settings and the SHA-256 of the source archive |
 
 Derived from URFD (CC BY-NC-SA 4.0): non-commercial research use, same licence.
+
+`kinect_height/<seq>.npz` holds the metric neck height used by the improved V3, made by `kinect_neck_height.py`
+from the URFD Kinect depth (RANSAC floor plane on the median background, neck pixel from RTMO, back-projected
+with the Kinect v1 intrinsics):
+
+| Key | Content |
+|---|---|
+| `height_m` | float (T,): neck height above the floor in metres, NaN where the neck is not found |
+| `neck_xyz` | float (T, 3): neck position in camera coordinates (m) |
+| `plane` | floor plane (a, b, c, d) |
+| `plane_inliers`, `floor_rms_m` | quality of the floor fit |
+| `n_depth_frames`, `n_rgb_frames` | frame counts of the two streams |

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "sequences": 70,
+  "folds": 2,
+  "identical_skeleton_groups": [],
+  "errors": [],
+  "warnings": [
+    "fold0 scene overlap between train/val: ['F2']",
+    "fold1 scene overlap between train/val: ['F1']",
+    "fold0 val inside fold1 test: 8/8 videos; select per fold only",
+    "fold1 val inside fold0 test: 9/9 videos; select per fold only"
+  ],
+  "interpretation": "PASS means test isolation and exact duplicate checks only. A train/val scene warning on the falls is by design in split_scene_v2 (validation = one ADL scene + some falls) and makes validation-based selection optimistic. A cross-fold warning means selection must stay per fold. Overfitting requires curves and independent held-out subjects/cameras."
+}

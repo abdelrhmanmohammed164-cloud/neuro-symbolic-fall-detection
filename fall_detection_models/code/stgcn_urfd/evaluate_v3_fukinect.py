@@ -15,9 +15,13 @@ ACTIONS = ("walking", "bending", "sitting", "squatting", "lying", "falling")
 def resample(h, src_fps, dst_fps=30.0):
     if src_fps == dst_fps or len(h) < 2:
         return h
+    if src_fps <= 0 or dst_fps <= 0:
+        raise ValueError("FPS must be positive")
     t_src = np.arange(len(h)) / src_fps
     t_dst = np.arange(0, t_src[-1] + 1e-9, 1 / dst_fps)
     ok = np.isfinite(h)
+    if not ok.any():
+        return np.full(len(t_dst), np.nan)
     out = np.interp(t_dst, t_src[ok], h[ok])
     near = np.round(t_dst * src_fps).astype(int).clip(0, len(h) - 1)
     out[~ok[near]] = np.nan                       # keep gaps as gaps
